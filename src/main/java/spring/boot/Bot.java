@@ -1,7 +1,7 @@
 package spring.boot;
 
 
-
+import io.github.biezhi.webp.WebpIO;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.GetFile;
 import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
@@ -9,6 +9,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -20,6 +21,7 @@ import org.apache.commons.io.FileUtils;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
+import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -27,111 +29,61 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.sql.Time;
+import java.time.ZonedDateTime;
+import java.util.*;
 import java.util.List;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
 
 public class Bot extends TelegramLongPollingBot {
+
+    int count_zakazov;
+    int positive_=0;
+    int negative_=0;
+
+
     //799964941
+
     TreeMap<Long,Users> user=new TreeMap<>();
-    Integer count_user=1;
-    static String screenName="src/main/resources/";
-    static long chatid = 314254027;
-    static long own_chatId=314254027;
-    static String info_for_zakaz = "";
+
+
+    static long chatid =806771814;
+
     static String info_for_start="Привет! \n" +
             "Я распечатаю и отправлю тебе твои любимые стикеры из Телеграмма!\n" +
             "\n" +
             "\uD83D\uDC4C 12 стикеров на листе А5\n" +
             "\uD83D\uDCB3 Стоимость одного набора - 50 грн\n" +
-            "\uD83D\uDCE6 Доставка по всей Украине!\n" +
+            "\uD83D\uDCE6 Доставка по всей Украине, удобным для вас способом (оплачивается отедльно)\n" +
             "\n" +
-            "Нажми «Создать макет\" что бы начать!";
-    private int x = 35;
-    private int y = 10;
-    int count = 1;
-    InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
-    static int number = 1;
+            "Нажми Создать StickerPack  что бы начать!";
+
+
+
     public ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-    static BufferedImage sample;
-    static BufferedImage finalImg;
-    BufferedImage temp;
-    private SendPhoto sendPreviuw;
 
-    {
-        sendPreviuw=new SendPhoto();
-        try
-        {
-            sample = ImageIO.read(new File("src/main/resources/" + "tamplate.png"));
-
-        } catch(
-                IOException e)
-
-        {
-            e.printStackTrace();
-        }
-
-        finalImg = new BufferedImage(sample.getWidth() * 1, sample.getHeight() * 1, sample.getType());
-
-        try
-
-        {
-            temp = ImageIO.read(new File(screenName + "StickerPackImage.png"));
-        } catch(
-                IOException e)
-
-        {
-            e.printStackTrace();
-        }
-        finalImg.createGraphics().
-
-                drawImage(temp, sample.getWidth()/3,sample.getHeight()-130,null);
-        user.put((long)41244123,new Users((long) 314254027,new ArrayList<Sticker>(),"Kolia"));
-    }
-    //Initializing the final image
     Users usere;
 
     @Override
     public void onUpdateReceived(Update update) {
 
-        screenName="src/main/resources/";
-
 
         if(update.hasMessage()) {
-            screenName+=update.getMessage().getChatId()+"/";
-            own_chatId=update.getMessage().getChatId();
-            try {
-                Files.createDirectories(Paths.get(screenName));
-            } catch (IOException e) {
-                e.printStackTrace();
+
+
+            if(user.containsKey(update.getMessage().getChatId()))
+                usere=user.get(update.getMessage().getChatId());
+            else {
+                user.put(update.getMessage().getChatId(), new Users(update.getMessage().getChatId(), new ArrayList<Sticker>(), update.getMessage().getFrom().getFirstName()));
+                usere=user.get(update.getMessage().getChatId());
             }
+
             System.out.println(update.getMessage().getFrom().getFirstName());
             Message message = update.getMessage();
-
             if (message != null && message.hasText()) {
-                try {
-                    if(!user.containsKey(message.getChatId()))
-                    {
-                        user.put(message.getChatId(), new Users(message.getChatId(), new ArrayList<Sticker>(),message.getFrom().getFirstName()));
-                    }
-                    if (user.containsKey(message.getChatId()))
-                    {
-                        own_chatId=message.getChatId();
-                        usere=user.get(own_chatId);
-                    }
-
-
-
-
-                }catch (Exception e)
-                {System.out.println(e.getStackTrace());}
 
                 SendMessage sendMessage = new SendMessage();
-                sendMessage.setChatId(message.getChatId());
+                sendMessage.setChatId(usere.getChatid());
 
                 System.out.println(message.getChatId());
 
@@ -141,13 +93,17 @@ public class Bot extends TelegramLongPollingBot {
 
                 switch (message.getText()) {
                     case "/start":
-                        Rebuild();
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Идет обработка запроса, подождите пожайлуста...."));
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
 
 
                         try {
                             System.out.println("start");
-                            execute( (new SendPhoto().setChatId(own_chatId).setPhoto(new File("src/main/resources/start.png")).setCaption(info_for_start))
-                                    .setReplyMarkup(remakeButtons(message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
+                            execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
+                                    .setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
@@ -155,44 +111,73 @@ public class Bot extends TelegramLongPollingBot {
                     case "О боте":
                         System.out.println("about bot");
                         try {
-                            sendApiMethod(sendMessage.setText("Этот бот создает макет Sticker Book из вашых стикеров").setReplyMarkup(remakeButtons(message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
+                            sendApiMethod(sendMessage.setText("\n" +
+                                    "С помощью данного бота - стало возможным создать StickerPack из Ваших любимых наборов стикеров!\n" +
+                                    "Все просто, для начала работы с ботом - отправьте любой стикер.\n" +
+                                    "\n" +
+                                    "По всем вопросам касательно работы данного бота, пишите - @stickers_kiev").setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
                         break;
                     case "Оформить":
+
+
+
                         System.out.println("about oformit");
+
                         sendMessage.setChatId(chatid);
-                        sendMessage.setText("Заказ про то шо коля хуй)");
+
                         try {
                             sendApiMethod(sendMessage);
+
+
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
-                        break;
-                    case "Создать макет":
+
+                    case "Создать StickerPack":
+
                         System.out.println("about sdelat maket");
                         try {
                             usere.setStickers( new ArrayList<Sticker>());
                             usere.setZakaz();
-                            sendApiMethod(sendMessage.setText("Отправте 12 стикеров").setReplyMarkup(remakeButtons("hide", replyKeyboardMarkup, usere.getStickers().size())));
+                            sendApiMethod(sendMessage.setText("Отправьте первый стикер").setReplyMarkup(remakeButtons(usere,"hide", replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
                         break;
+                    case "/alex":
+                        Message mes1=update.getMessage();
+                        SendMessage message1=new SendMessage();
+                        message1.setText("Общее количество заказов: "+ String.valueOf(count_zakazov)+"\n"+"Позитивние отзыви: "+positive_+"\n"+"Негативние отзыви: "+negative_+"\n"+"Не оставили отзыв: "+(count_zakazov-positive_-negative_));
+                        message1.setChatId(usere.getChatid());
+                        try {
+                            sendApiMethod(message1);
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case "/res":
+                        count_zakazov=0;
+                        positive_=0;
+                        negative_=0;
+                        break;
+
                     default:
+
 
                         try {
                             if (message.getText()!=null) {
                                 sendMessage.setChatId(chatid);
-                                sendMessage.setText(message.getText());
+                                sendMessage.setText("Данные пользователя :"+usere.getName()+", по заказу №:" +usere.getChatid() +"\n"+message.getText());
                                 execute(sendMessage);
-                                execute((sendInlineKeyBoardMessage(own_chatId,3)
-                                        .setText("Теперь давайте выберем способ оплаты")));
-                                user.get(own_chatId).setZakaz();
+                                execute((sendInlineKeyBoardMessage(usere.getChatid(),3)
+                                        .setText("Выбеите способ оплаты")));
+                                user.get(usere.getChatid()).setZakaz();
                             } else {
                                 sendMessage.setText("введите запрос /start ещё раз и повторите создание макета");
-                                sendApiMethod(sendMessage.setReplyMarkup(remakeButtons(message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
+                                sendApiMethod(sendMessage.setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                             }
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
@@ -201,119 +186,146 @@ public class Bot extends TelegramLongPollingBot {
                 }
             }//To worker make primary message
             if (message != null && message.hasSticker()) {
-                int counts=0;
+                if(!user.containsKey(update.getMessage().getChatId()))
+                {
+                    user.put(update.getMessage().getChatId(), new Users(update.getMessage().getChatId(), new ArrayList<Sticker>(),message.getFrom().getFirstName()));
+                }
+                if (user.containsKey(message.getChatId()))
+                {
 
-                sendPreviuw.setChatId(message.getChatId());
+                    usere=user.get(update.getMessage().getChatId());
+                }
+
                 System.out.println(message.getChatId());
                 if (usere.getStickers().size() < 12) {
-                    if(!user.containsKey(update.getMessage().getChatId()))
-                    {
-                        user.put(update.getMessage().getChatId(), new Users(update.getMessage().getChatId(), new ArrayList<Sticker>(),message.getFrom().getFirstName()));
-                    }
-                    if (user.containsKey(update.getMessage().getChatId()))
-                    {
-                        own_chatId=update.getMessage().getChatId();
-                        usere=user.get(own_chatId);
-                    }
-                    own_chatId=message.getChatId();
                     usere.getStickers().add(message.getSticker());
                     SendPhoto sendMessage = new SendPhoto();
-                    sendMessage.setChatId(message.getChatId());
-                    number++;
+                    sendMessage.setChatId(usere.getChatid());
+
 
                     try {
-                        getSticker(message, usere.getStickers().size());
+                        getSticker(message, usere.getStickers().size(),usere);
                     } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        usere.setCount(usere.getCount()+1);
+                        DecodedWebP(usere,usere.getCount());
+
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
 
 
-
                     try {
-                        sendApiMethod(sendInlineKeyBoardMessage(message.getChatId(),1).setText("На макете осталось свободных мест  "
-                                + (12 - usere.getStickers().size()) + " для стикеров"));
+                        sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),1).setText("Свободных мест на листе:  "
+                                + (12 - usere.getStickers().size()) ));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                 }
                 if (usere.getStickers().size() >= 12) {
-                    if(!user.containsKey(update.getMessage().getChatId()))
-                    {
-                        user.put(update.getMessage().getChatId(), new Users(update.getMessage().getChatId(), new ArrayList<Sticker>(),message.getFrom().getFirstName()));
-                    }
-                    if (user.containsKey(update.getMessage().getChatId()))
-                    {
-                        own_chatId=update.getMessage().getChatId();
-                        usere=user.get(own_chatId);
-                    }
+
                     try {
-                        SendPhoto send = combineALLImages(message, screenName, 12);
+                        SendPhoto send =usere.getPreview();
                         SendMessage sendMessage = new SendMessage();
-                        sendMessage.setChatId(message.getChatId());
-                        sendApiMethod(sendInlineKeyBoardMessage(message.getChatId(),2).setText("Теперь давайте оформим заказ"));
+                        sendMessage.setChatId(usere.getChatid());
+//                       sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),2).setText("Теперь давайте оформим заказ"));
+                        sendApiMethod(sendMessage.setText("1.Для оформления заказа - \"Оформить\".\n" +
+                                "2.Для предосмотра StickerPack - \"Превью\".\n" +
+                                "3.Для создания нового StickerPack - \"Начать сначала\"."));
+
                         send.setChatId(chatid);
 
                         System.out.println("my photo");
                         execute(send);
-                        Thread.sleep(100);
 
 
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (TelegramApiException e) {
+                    }  catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
 
 
 
                 }
+
             } //To worker make stickers messege
         }
-
         if(update.hasCallbackQuery()){
-            screenName+=update.getCallbackQuery().getMessage().getChatId()+"/";
-            own_chatId=update.getCallbackQuery().getMessage().getChatId();
+            if(user.containsKey(update.getCallbackQuery().getMessage().getChatId()))
+                usere=user.get(update.getCallbackQuery().getMessage().getChatId());
+            else {
+                user.put(update.getCallbackQuery().getMessage().getChatId(), new Users(update.getCallbackQuery().getMessage().getChatId(), new ArrayList<Sticker>(), update.getCallbackQuery().getMessage().getFrom().getFirstName()));
+                usere=user.get(update.getCallbackQuery().getMessage().getChatId());
+            }
+
+
             switch (update.getCallbackQuery().getData())
             {
                 case "preview":
-                    System.out.println("about preview");
                     try {
-                        execute(sendPreviuw);
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Идет обработка запроса, подождите пожайлуста...."));
                     } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("about preview"+usere.getCount());
+                    try {
+                        usere.AddPhotoToTemplate();
+                        execute(usere.getPreview().setChatId(usere.getChatid()));
+                    } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
                     break;
                 case "enter":
+                    try {
+                        execute(sends("Имя Пользователя : "+usere.getName()+"\n"+"Заказ №"+usere.getChatid(),+chatid));
+                    } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    }
+                    usere.setZakaz(usere.getZakaz()+1);
+
                     System.out.println("about enter");
+
                     SendMessage sendMessage =new SendMessage();
-                    sendMessage.setChatId(own_chatId);
-                    sendMessage.setText("Напишите свое Ф.И.О. \uD83D\uDC68\u200D\uD83D\uDCBB \nсвой город\n номер телефона\n службу доставки и отделение почты");
+                    sendMessage.setChatId(usere.getChatid());
+                    sendMessage.setText("Для оформления заказа укажите:\n" +
+                            "1) ФИО\n" +
+                            "2) Город доставки\n" +
+                            "3) Номер телефона");
+                    try {
+                        execute(sendMessage);
+                    } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    }
 
                     try {
 
                         System.out.println("worker photo");
-                        System.out.println(screenName+"/stickerpack.png");
-                        execute(new SendDocument().setDocument(new File(screenName+"stickerpack.png")).setChatId(chatid));
+                        execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
+                        execute(new SendMessage().setText("Макет под номером заказа:"+usere.getChatid()).setChatId(chatid));
 
-                        System.out.println("message photo");
 
-                        execute(sendMessage);
 
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
+
+
                     System.out.println("rebuild photo");
-                    Rebuild();
+                    usere.Rebuild();
+
+
                     break;
                 case "otmena":
 
                     System.out.println("about otmena");
                     try {
-                        execute(new SendMessage().setChatId(own_chatId).setText("Нажмите /start что б опять начать"));
+                        execute(new SendMessage().setChatId(usere.getChatid()).setText("Нажмите /start для повторого создания набора!"));
                     } catch (TelegramApiException e) {
-
                         e.printStackTrace();
                     }
                     break;
@@ -321,22 +333,28 @@ public class Bot extends TelegramLongPollingBot {
                 case "naloz":
                     SendMessage sendMessa=new SendMessage();
                     sendMessa.setChatId(chatid);
-                    sendMessa.setText("Наложеным");
+                    sendMessa.setText("Способ оплаты по заказу №:" + usere.getChatid()+"\n"+"Вид оплаты: При получении");
                     try {
                         execute(sendMessa);
                         execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам понравился наш сервис \uD83D\uDE80?"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                    Rebuild();
+                    usere.Rebuild();
+
 
                     break;
                 case "na_carty":
+                    SendMessage sendMessa1=new SendMessage();
+                    sendMessa1.setChatId(chatid);
+                    sendMessa1.setText("Способ оплаты по заказу №:" + usere.getChatid()+"\n"+"Вид оплаты: На карту");
+
                     try {
                         execute(sendInlineKeyBoardMessage(usere.getChatid(),5).setText("Выбирите банк :"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
+
 
                     break;
                 case "privat":
@@ -350,8 +368,8 @@ public class Bot extends TelegramLongPollingBot {
                         System.out.println(e.getStackTrace());
                     }
 
-                    sendMessas1.setChatId(own_chatId);
-                    sendMessas1.setText("Інтернет картка: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
+                    sendMessas1.setChatId(usere.getChatid());
+                    sendMessas1.setText("Номер карты: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
 
                     try {
                         execute(sendMessas1);
@@ -362,7 +380,7 @@ public class Bot extends TelegramLongPollingBot {
 
 
 
-                    Rebuild();
+                    usere.Rebuild();
                     break;
                 case "mono":
                     SendMessage sendMessas2=new SendMessage();
@@ -375,8 +393,8 @@ public class Bot extends TelegramLongPollingBot {
                         System.out.println(e.getStackTrace());
                     }
 
-                    sendMessas2.setChatId(own_chatId);
-                    sendMessas2.setText("Інтернет картка: \n 5169360005626969\n"+"https://www.monobank.com.ua");
+                    sendMessas2.setChatId(usere.getChatid());
+                    sendMessas2.setText("Номер карты: \n 5169360005626969\n");
 
                     try {
                         execute(sendMessas2);
@@ -384,28 +402,43 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
-                    Rebuild();
+                    usere.Rebuild();
                     break;
                 case "yes":
+                    try {
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Спасибо за Ваш отзыв!\n" +
+                                "Мы свяжемся с Вами в ближайшее время, для создания еще одного набора - нажимте /start"));
+                    } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    }
+                    positive_+=1;
 
                     try {
-                        execute(sends("@"+usere.getName()+": "+own_chatId+" Этому пользователю понравился сервис ",chatid ));
-                        execute( (new SendPhoto().setChatId(own_chatId).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
-                                .setReplyMarkup(remakeButtons("/start", replyKeyboardMarkup, usere.getStickers().size())));
+                        execute(sends(usere.getName()+": "+usere.getChatid()+" Этому пользователю понравился сервис ",chatid ));
+                        execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
+                                .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                     break;
                 case"no":
                     try {
-                        execute(sends( own_chatId+" Этому пользователю не понравился сервис ",chatid));
-                        execute( (new SendPhoto().setChatId(own_chatId).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
-                                .setReplyMarkup(remakeButtons("/start", replyKeyboardMarkup, usere.getStickers().size())));
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Спасибо за Ваш отзыв!\n" +
+                                "Мы свяжемся с Вами в ближайшее время, для создания еще одного набора - нажимте /start"));
+                    } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    }
+                    negative_+=1;
+                    try {
+                        execute(sends( usere.getChatid()+" Этому пользователю не понравился сервис ",chatid));
+                        execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
+                                .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                     break;
             }
+
         } //Call inlineButton
     }
 
@@ -432,7 +465,6 @@ public class Bot extends TelegramLongPollingBot {
         }
         return false;
     }
-
     //Send primary message
     public SendMessage sends(String s,Long chat){
         SendMessage ser=new SendMessage();
@@ -442,27 +474,7 @@ public class Bot extends TelegramLongPollingBot {
 
 
     }
-
     //Rebuild all pictures to new
-    public  void Rebuild(){
-        try {
-
-            sample = ImageIO.read(new File("src/main/resources/tamplate.png"));
-            finalImg = new BufferedImage(sample.getWidth() * 1, sample.getHeight() * 1, sample.getType());
-            temp = ImageIO.read(new File("src/main/resources/StickerPackImage.png"));
-            finalImg.createGraphics().
-                    drawImage(temp, sample.getWidth() / 3, sample.getHeight() - 130, null);
-            sendPreviuw = new SendPhoto();
-
-        }
-        catch (Exception e)
-        {System.out.println(e.getStackTrace());}
-        usere.setStickers( new ArrayList<Sticker>());
-        number = 0;
-        count=1;
-        x=35;
-        y=10;
-    }
 
     //Remake inlineButtons
     public static SendMessage sendInlineKeyBoardMessage(long chatId,int n) {
@@ -478,7 +490,7 @@ public class Bot extends TelegramLongPollingBot {
             inlineKeyboardButton1.setCallbackData("preview");
             inlineKeyboardButton2.setText("Оформить ✅");
             inlineKeyboardButton2.setCallbackData("enter");
-            inlineKeyboardButton3.setText("Начать с начала ↩️");
+            inlineKeyboardButton3.setText("Начать сначала ↩️");
             inlineKeyboardButton3.setCallbackData("otmena");
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
             List<InlineKeyboardButton> keyboardButtonsRow2 = new ArrayList<>();
@@ -540,9 +552,9 @@ public class Bot extends TelegramLongPollingBot {
         {
             InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
             InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-            inlineKeyboardButton1.setText("На карту Приват банка");
+            inlineKeyboardButton1.setText("Приват банк");
             inlineKeyboardButton1.setCallbackData("privat");
-            inlineKeyboardButton2.setText("На карту Моно банка");
+            inlineKeyboardButton2.setText("Моно банк");
             inlineKeyboardButton2.setCallbackData("mono");
 
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
@@ -557,9 +569,8 @@ public class Bot extends TelegramLongPollingBot {
 
         return new SendMessage().setChatId(chatId).setText("Пример").setReplyMarkup(inlineKeyboardMarkup);
     }
-
     //Getter stickers from message
-    public void getSticker(Message message, int numbers) throws MalformedURLException {
+    public void getSticker(Message message, int numbers, Users user) throws MalformedURLException {
         GetFile getFile = new GetFile();
         getFile.setFileId(message.getSticker().getFileId());
 
@@ -577,7 +588,7 @@ public class Bot extends TelegramLongPollingBot {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        File localFile = new File(screenName+"sticker" + numbers + ".webp");
+        File localFile = new File(user.getScreenName()+"sticker" + numbers + ".webp");
 
         try {
             FileUtils.copyInputStreamToFile(fileUrl, localFile);
@@ -585,41 +596,13 @@ public class Bot extends TelegramLongPollingBot {
             e.printStackTrace();
         }
     }
-
-    public void GetInfoFromSite(){
-        URL url;
-        InputStream is = null;
-        DataInputStream dis;
-        String line;
-        try {
-            url = new URL("https://privatbank.ua/ru/sendmoney");
-            is = url.openStream();  // throws an IOException
-            dis = new DataInputStream(new BufferedInputStream(is));
-
-            while ((line = dis.readLine()) != null) {
-                if(line.indexOf("receiver_card")>=0)
-                    System.out.println(line);
-            }
-        } catch (MalformedURLException mue) {
-            mue.printStackTrace();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        } finally {
-            try {
-                is.close();
-            } catch (IOException ioe) {
-                // nothing to see here
-            }
-        }
-
-    }
     //Remake replyButtons
-    public synchronized ReplyKeyboardMarkup remakeButtons(String s, ReplyKeyboardMarkup replyKeyboardMarkup, int n) {
+    public synchronized ReplyKeyboardMarkup remakeButtons(Users user,String s, ReplyKeyboardMarkup replyKeyboardMarkup, int n) {
         KeyboardRow keyboardRow1 = new KeyboardRow();
         KeyboardButton keyboardButton1 = new KeyboardButton();
         KeyboardButton keyboardButton2 = new KeyboardButton();
         keyboardButton1.setText("О боте");
-        keyboardButton2.setText("Создать макет");
+        keyboardButton2.setText("Создать StickerPack");
         keyboardRow1.add(keyboardButton1);
         keyboardRow1.add(keyboardButton2);
         List<KeyboardRow> klava = new ArrayList<KeyboardRow>();
@@ -640,7 +623,7 @@ public class Bot extends TelegramLongPollingBot {
                 return replyKeyboardMarkup;
             case "О боте":
                 keyboardRow1.clear();
-                keyboardRow1.add(keyboardButton1.setText("Создать макет"));
+                keyboardRow1.add(keyboardButton1.setText("Создать StickerPack"));
                 return replyKeyboardMarkup;
             case "/all":
                 keyboardRow1.clear();
@@ -661,7 +644,7 @@ public class Bot extends TelegramLongPollingBot {
             case "Оформить":
                 keyboardRow1.clear();
                 keyboardButton1.setText("О боте");
-                keyboardButton2.setText("Создать макет");
+                keyboardButton2.setText("Создать StickerPack");
                 keyboardRow1.add(keyboardButton1);
                 keyboardRow1.add(keyboardButton2);
                 return replyKeyboardMarkup;
@@ -673,63 +656,25 @@ public class Bot extends TelegramLongPollingBot {
 
     }
     //Convert webp to png
+    public void DecodedWebP(Users user,int number) throws IOException {
+        String inputWebpPath = user.getScreenName()+"sticker" + number + ".webp";
 
-    // Add new Sticker for Sticker pack
-    public  SendPhoto AddPhotoToTemplate(Message message){
-        SendPhoto sen=new SendPhoto();
-        sen.setChatId(message.getChatId());
+        String outputPngPath = user.getScreenName()+"sticker" + number + ".png";
 
-        int wid=sample.getWidth()/3;
-        int hei=sample.getWidth()/4;
+        WebpIO.create().toNormalImage(inputWebpPath, outputPngPath);
 
-
-        try {
-            temp = ImageIO.read(new File(screenName+"sticker"+count+".png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(x+" "+y);
-        if(count%3==0)
-        {
-            finalImg.createGraphics().drawImage(temp, x,y , null);
-            x=35;
-            y+=hei+150;
-        }else{
-
-            finalImg.createGraphics().drawImage(temp, x,y , null);
-            x+=wid;
-        }
-        System.out.println(screenName+"sticker" + count + ".png");
-
-        File final_Image = new File(screenName+"stickerpack.png");
-        try {
-            ImageIO.write(finalImg, "png", final_Image);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        count++;
-        return new SendPhoto().setChatId(message.getChatId()).setPhoto(new File(screenName+"stickerpack.png")).setCaption(info_for_zakaz);
 
     }
-    // Send finished result packSticker
-    private static SendPhoto combineALLImages(Message message,String screenNames, int screens) throws IOException, InterruptedException {
 
-
-
-
-        File final_Image = new File(screenName+"stickerpack.png");
-        ImageIO.write(finalImg, "png", final_Image);
-
-
-        return new SendPhoto().setChatId(message.getChatId()).setPhoto(new File(screenName+"stickerpack.png")).setCaption(info_for_zakaz);
-    }
     //UserName
     @Override
     public String getBotUsername() {
-        return "Rashod_my_bot";
+        return "@Polled_bot";
     }
+
+    //Tocken
     @Override
     public String getBotToken() {
-        return "865723053:AAHuVEKhEeEgj9pAs1Jpq8B8KK_jS4N2ODY";
+        return "851210991:AAEJhjujEK7z5e_SfmPevHeWLP0KiK0AHmA";
     }
 }
