@@ -129,6 +129,7 @@ public class Bot extends TelegramLongPollingBot {
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
+                        usere.Rebuild();
                         break;
                     case "О боте":
                         System.out.println("about bot");
@@ -283,6 +284,11 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        execute(new SendMessage(usere.getChatid(),"Для продолжения оформления StickerPack, отправьте стикер!!"));
+                    } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                     break;
