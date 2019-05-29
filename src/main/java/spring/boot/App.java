@@ -13,5 +13,11 @@ public class App {
         model.addAttribute("name", name);
         return "app";
     }
+    @GetMapping("/users")
+    public String users(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+
+        return "users";
+    }
 
 }
