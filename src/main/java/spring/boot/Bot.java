@@ -1,6 +1,11 @@
 package spring.boot;
 
+import java.io.File;
+import java.io.IOException;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import io.github.biezhi.webp.WebpIO;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.GetFile;
@@ -21,6 +26,7 @@ import org.apache.commons.io.FileUtils;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
+
 import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -92,7 +98,23 @@ public class Bot extends TelegramLongPollingBot {
                 replyKeyboardMarkup.setSelective(true);
 
                 switch (message.getText()) {
+                    case "/inf":
+                        for (Users us:user.values())
+                        {
+                            try {
+                                sendApiMethod(new SendMessage().setText(us.toString()).setChatId(chatid));
+                            } catch (TelegramApiException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        break;
                     case "/start":
+                      try {
+                          Test();
+                      }catch (Exception e)
+                      {
+                          e.printStackTrace();
+                      }
                         try {
                             sendApiMethod(new SendMessage(usere.getChatid(),"Идет обработка запроса, подождите пожайлуста...."));
                         } catch (TelegramApiException e) {
@@ -120,23 +142,7 @@ public class Bot extends TelegramLongPollingBot {
                             e.printStackTrace();
                         }
                         break;
-                    case "Оформить":
-
-
-
-                        System.out.println("about oformit");
-
-                        sendMessage.setChatId(chatid);
-
-                        try {
-                            sendApiMethod(sendMessage);
-
-
-                        } catch (TelegramApiException e) {
-                            e.printStackTrace();
-                        }
-
-                    case "Создать StickerPack":
+                        case "Создать StickerPack":
 
                         System.out.println("about sdelat maket");
                         try {
@@ -324,6 +330,7 @@ public class Bot extends TelegramLongPollingBot {
 
                     System.out.println("about otmena");
                     try {
+                        usere.Rebuild();
                         execute(new SendMessage().setChatId(usere.getChatid()).setText("Нажмите /start для повторого создания набора!"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
@@ -665,16 +672,66 @@ public class Bot extends TelegramLongPollingBot {
 
 
     }
+    public void Test()
+    {
 
+        String HTMLSTring = "<!DOCTYPE html>"
+                + "<html>"
+                + "<head>"
+                + "<title>JSoup Example</title>"
+                + "</head>"
+                + "<body>"
+                + "<table><tr><td><h1>HelloWorld</h1></tr>"
+                + "</table>"
+                + "</body>"
+                + "</html>";
+
+        Document html = Jsoup.parse(HTMLSTring);
+        String title = html.title();
+        String h1 = html.body().getElementsByTag("h1").text();
+
+        System.out.println("Input HTML String to JSoup :" + HTMLSTring);
+        System.out.println("After parsing, Title : " + title);
+        System.out.println("Afte parsing, Heading : " + h1);
+
+        // JSoup Example 2 - Reading HTML page from URL
+        Document doc;
+        try {
+            doc = Jsoup.connect("https://apps003.herokuapp.com/app").get();
+            title = doc.title();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Jsoup Can read HTML page from URL, title : " + title);
+
+        // JSoup Example 3 - Parsing an HTML file in Java
+        //Document htmlFile = Jsoup.parse("login.html", "ISO-8859-1"); // wrong
+        Document htmlFile = null;
+        try {
+            htmlFile = Jsoup.parse(new File("login.html"), "ISO-8859-1");
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } // right
+        title = htmlFile.title();
+        Element div = htmlFile.getElementById("login");
+        String cssClass = div.className(); // getting class form HTML element
+
+        System.out.println("Jsoup can also parse HTML file directly");
+        System.out.println("title : " + title);
+        System.out.println("class of div tag : " + cssClass);
+
+        }
     //UserName
     @Override
     public String getBotUsername() {
-        return "@Polled_bot";
+        return "@StickersPackBot";
     }
 
     //Tocken
     @Override
     public String getBotToken() {
-        return "851210991:AAEJhjujEK7z5e_SfmPevHeWLP0KiK0AHmA";
+        return "874387005:AAF2YNgabQejDE5NArh3iw6elIdR62sDyZE";
     }
 }

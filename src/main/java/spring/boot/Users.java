@@ -93,6 +93,7 @@ public class Users {
        {e.printStackTrace();}
         File final_Image = new File(this.screenName+"stickerpack.png");
         finalImg = new BufferedImage(sample.getWidth() * 1, sample.getHeight() * 1, sample.getType());
+        returnes_x_y();
         for(int i=1;i<=getCount();i++){
             int wid=sample.getWidth()/3;
             int hei=sample.getWidth()/4;
@@ -237,5 +238,14 @@ public class Users {
 
     public void setStickers(ArrayList<Sticker> stickers) {
         this.stickers = stickers;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "name='" + name + '\'' +
+                ", chatid=" + chatid +
+                ", screenName='" + screenName + '\'' +
+                '}';
     }
 }
