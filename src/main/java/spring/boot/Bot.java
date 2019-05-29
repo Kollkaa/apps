@@ -377,7 +377,7 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                     sendMessas1.setChatId(usere.getChatid());
-                    sendMessas1.setText("Номер карты Приват Банк: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
+                    sendMessas1.setText("Номер карты ПриватБанк: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
 
                     try {
                         execute(sendMessas1);
@@ -393,7 +393,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "mono":
                     SendMessage sendMessas2=new SendMessage();
                     sendMessas2.setChatId(chatid);
-                    sendMessas2.setText("Способ оплаты на карту Моно Банка");
+                    sendMessas2.setText("Способ оплаты на карту МоноБанка");
                     try {
                         execute(sendMessas2);
                     }catch (Exception e)
