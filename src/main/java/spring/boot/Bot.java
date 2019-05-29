@@ -287,6 +287,7 @@ public class Bot extends TelegramLongPollingBot {
                     }
                     break;
                 case "enter":
+                    count_zakazov+=1;
                     try {
                         execute(sends("Имя Пользователя : "+usere.getName()+"\n"+"Заказ №"+usere.getChatid(),+chatid));
                     } catch (TelegramApiException e) {
@@ -301,7 +302,7 @@ public class Bot extends TelegramLongPollingBot {
                     sendMessage.setText("Для оформления заказа укажите:\n" +
                             "1) ФИО\n" +
                             "2) Город доставки\n" +
-                            "3) Номер телефона");
+                            "3) Номер телефона(Обязательно, иначе мы не сможем с вами связаться..)");
                     try {
                         execute(sendMessage);
                     } catch (TelegramApiException e) {
