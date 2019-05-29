@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="heroku">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cwebp_tmp/cwebp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cwebp_tmp/dwebp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cwebp_tmp/gif2webp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/biezhi/webp/MimeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/biezhi/webp/WebpIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/biezhi/webp/WebpIOException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/linux_x86/cwebp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/linux_x86/dwebp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/linux_x86/gif2webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/linux_x86_64/cwebp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/linux_x86_64/dwebp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/linux_x86_64/gif2webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/mac_x86_64/cwebp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/mac_x86_64/dwebp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/mac_x86_64/gif2webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x66/cwebp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x66/dwebp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x66/freeglut.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x66/gif2webp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x86_64/cwebp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x86_64/dwebp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x86_64/freeglut.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cwebp/windows_x86_64/gif2webp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/start.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/apps.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/apps.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/StickerPackImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/boot/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/boot/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/boot/Users.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/tamplate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/start.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="673" selection-start-line="673" selection-end-line="673" />
+            <state relative-caret-position="321">
+              <caret line="310" selection-start-line="310" selection-end-line="310" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#26637#26650#0" expanded="true" />
@@ -127,35 +89,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/314254027/stickerpack.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="156">
+              <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#505#506#0" expanded="true" />
                 <element signature="e#539#540#0" expanded="true" />
+                <element signature="method#Users#0;class#Users#0" />
+                <element signature="e#1044#1141#0" />
+                <element signature="e#1189#1233#0" />
                 <element signature="e#1810#1811#0" expanded="true" />
                 <element signature="e#1848#1849#0" expanded="true" />
                 <element signature="e#1986#1987#0" expanded="true" />
                 <element signature="e#2019#2020#0" expanded="true" />
-                <element signature="e#4954#4955#0" expanded="true" />
-                <element signature="e#4978#4979#0" expanded="true" />
-                <element signature="e#5009#5010#0" expanded="true" />
-                <element signature="e#5035#5036#0" expanded="true" />
-                <element signature="e#5060#5061#0" expanded="true" />
-                <element signature="e#5084#5085#0" expanded="true" />
-                <element signature="e#5115#5116#0" expanded="true" />
-                <element signature="e#5141#5142#0" expanded="true" />
-                <element signature="e#5169#5170#0" expanded="true" />
-                <element signature="e#5197#5198#0" expanded="true" />
-                <element signature="e#5236#5237#0" expanded="true" />
-                <element signature="e#5270#5271#0" expanded="true" />
+                <element signature="method#combineALLImages#0;class#Users#0" />
+                <element signature="e#5173#5174#0" expanded="true" />
+                <element signature="e#5230#5231#0" expanded="true" />
+                <element signature="e#5279#5280#0" expanded="true" />
+                <element signature="e#5336#5337#0" expanded="true" />
+                <element signature="e#5392#5393#0" expanded="true" />
+                <element signature="e#5465#5466#0" expanded="true" />
+                <element signature="e#5524#5525#0" expanded="true" />
+                <element signature="e#5582#5583#0" expanded="true" />
+                <element signature="e#5641#5642#0" expanded="true" />
+                <element signature="e#5703#5704#0" expanded="true" />
+                <element signature="e#5781#5782#0" expanded="true" />
+                <element signature="e#5859#5860#0" expanded="true" />
+                <element signature="e#5946#5947#0" expanded="true" />
+                <element signature="e#6046#6047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,8 +148,8 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/users.html" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
       </list>
     </option>
   </component>
@@ -207,9 +170,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -257,14 +220,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="314254027" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
@@ -359,7 +314,7 @@
       <option name="presentableId" value="Default" />
       <updated>1559133436365</updated>
       <workItem from="1559133439846" duration="2138000" />
-      <workItem from="1559136352578" duration="6696000" />
+      <workItem from="1559136352578" duration="7121000" />
     </task>
     <task id="LOCAL-00001" summary="heroku">
       <created>1559139139841</created>
@@ -410,17 +365,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559143325418</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="heroku">
+      <created>1559144523840</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559144523840</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8834000" />
+    <option name="totallyTimeSpent" value="9259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17972973" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17972973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -431,7 +393,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49864864" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4972973" visible="true" weight="0.38011697" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49648383" weight="0.374269" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,7 +401,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32988167" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8945946" weight="0.24122807" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5027027" side_tool="true" visible="true" weight="0.38011697" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.502809" side_tool="true" weight="0.3846154" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932432" weight="0.32894737" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -519,38 +481,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
-            <element signature="e#1848#1849#0" expanded="true" />
-            <element signature="e#1986#1987#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="e#4954#4955#0" expanded="true" />
-            <element signature="e#4978#4979#0" expanded="true" />
-            <element signature="e#5009#5010#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
-            <element signature="e#5060#5061#0" expanded="true" />
-            <element signature="e#5084#5085#0" expanded="true" />
-            <element signature="e#5115#5116#0" expanded="true" />
-            <element signature="e#5141#5142#0" expanded="true" />
-            <element signature="e#5169#5170#0" expanded="true" />
-            <element signature="e#5197#5198#0" expanded="true" />
-            <element signature="e#5236#5237#0" expanded="true" />
-            <element signature="e#5270#5271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/314254027/stickerpack.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="673" selection-start-line="673" selection-end-line="673" />
+        <state relative-caret-position="321">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#26637#26650#0" expanded="true" />
@@ -562,8 +499,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/314254027/stickerpack.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="method#Users#0;class#Users#0" />
+            <element signature="e#1044#1141#0" />
+            <element signature="e#1189#1233#0" />
+            <element signature="e#1810#1811#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="e#2019#2020#0" expanded="true" />
+            <element signature="method#combineALLImages#0;class#Users#0" />
+            <element signature="e#5173#5174#0" expanded="true" />
+            <element signature="e#5230#5231#0" expanded="true" />
+            <element signature="e#5279#5280#0" expanded="true" />
+            <element signature="e#5336#5337#0" expanded="true" />
+            <element signature="e#5392#5393#0" expanded="true" />
+            <element signature="e#5465#5466#0" expanded="true" />
+            <element signature="e#5524#5525#0" expanded="true" />
+            <element signature="e#5582#5583#0" expanded="true" />
+            <element signature="e#5641#5642#0" expanded="true" />
+            <element signature="e#5703#5704#0" expanded="true" />
+            <element signature="e#5781#5782#0" expanded="true" />
+            <element signature="e#5859#5860#0" expanded="true" />
+            <element signature="e#5946#5947#0" expanded="true" />
+            <element signature="e#6046#6047#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

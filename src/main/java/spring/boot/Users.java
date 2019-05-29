@@ -85,7 +85,12 @@ public class Users {
     }
     // Add new Sticker for Sticker pack
     public  void AddPhotoToTemplate() throws IOException {
+       try {
+           File file = new File(this.screenName + "stickerpack.png");
 
+           System.out.println(file.delete());
+       }catch (Exception e)
+       {e.printStackTrace();}
         File final_Image = new File(this.screenName+"stickerpack.png");
         finalImg = new BufferedImage(sample.getWidth() * 1, sample.getHeight() * 1, sample.getType());
         for(int i=1;i<=getCount();i++){

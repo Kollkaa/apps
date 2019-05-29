@@ -47,7 +47,7 @@ public class Bot extends TelegramLongPollingBot {
     TreeMap<Long,Users> user=new TreeMap<>();
 
 
-    static long chatid =806771814;
+    static long chatid =314254027;
 
     static String info_for_start="Привет! \n" +
             "Я распечатаю и отправлю тебе твои любимые стикеры из Телеграмма!\n" +
@@ -219,7 +219,7 @@ public class Bot extends TelegramLongPollingBot {
 
                     try {
                         sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),1).setText("Свободных мест на листе:  "
-                                + (12 - usere.getStickers().size()) ));
+                                + (12 - usere.getCount()) ));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -305,12 +305,12 @@ public class Bot extends TelegramLongPollingBot {
                     try {
 
                         System.out.println("worker photo");
+                        usere.AddPhotoToTemplate();
                         execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
                         execute(new SendMessage().setText("Макет под номером заказа:"+usere.getChatid()).setChatId(chatid));
-
-
-
                     } catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
 
