@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Users.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="187">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
@@ -43,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="119">
+              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="323">
               <caret line="23" column="9" selection-start-line="12" selection-start-column="6" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -76,13 +73,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="734" column="61" selection-start-line="734" selection-start-column="61" selection-end-line="734" selection-end-column="61" />
+            <state relative-caret-position="4420">
+              <caret line="394" column="68" selection-start-line="394" selection-start-column="68" selection-end-line="394" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8358#11035#0" />
-                <element signature="e#26637#26650#0" expanded="true" />
+                <element signature="e#31380#31381#0" expanded="true" />
                 <element signature="e#31421#31422#0" expanded="true" />
+                <element signature="e#31483#31484#0" expanded="true" />
                 <element signature="e#31553#31554#0" expanded="true" />
               </folding>
             </state>
@@ -92,33 +89,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="3349">
               <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
                 <element signature="method#Users#0;class#Users#0" />
-                <element signature="e#1044#1141#0" />
-                <element signature="e#1189#1233#0" />
-                <element signature="e#1810#1811#0" expanded="true" />
-                <element signature="e#1848#1849#0" expanded="true" />
-                <element signature="e#1986#1987#0" expanded="true" />
-                <element signature="e#2019#2020#0" expanded="true" />
                 <element signature="method#combineALLImages#0;class#Users#0" />
+                <element signature="e#5173#5174#0" expanded="true" />
                 <element signature="e#5197#5198#0" expanded="true" />
+                <element signature="e#5228#5229#0" expanded="true" />
                 <element signature="e#5254#5255#0" expanded="true" />
+                <element signature="e#5279#5280#0" expanded="true" />
                 <element signature="e#5303#5304#0" expanded="true" />
+                <element signature="e#5334#5335#0" expanded="true" />
                 <element signature="e#5360#5361#0" expanded="true" />
+                <element signature="e#5388#5389#0" expanded="true" />
                 <element signature="e#5416#5417#0" expanded="true" />
+                <element signature="e#5455#5456#0" expanded="true" />
                 <element signature="e#5489#5490#0" expanded="true" />
+                <element signature="e#5521#5522#0" expanded="true" />
                 <element signature="e#5548#5549#0" expanded="true" />
+                <element signature="e#5578#5579#0" expanded="true" />
                 <element signature="e#5606#5607#0" expanded="true" />
+                <element signature="e#5636#5637#0" expanded="true" />
                 <element signature="e#5665#5666#0" expanded="true" />
+                <element signature="e#5698#5699#0" expanded="true" />
                 <element signature="e#5727#5728#0" expanded="true" />
+                <element signature="e#5769#5770#0" expanded="true" />
                 <element signature="e#5805#5806#0" expanded="true" />
+                <element signature="e#5852#5853#0" expanded="true" />
                 <element signature="e#5883#5884#0" expanded="true" />
+                <element signature="e#5933#5934#0" expanded="true" />
                 <element signature="e#5970#5971#0" expanded="true" />
+                <element signature="e#6030#6031#0" expanded="true" />
                 <element signature="e#6070#6071#0" expanded="true" />
               </folding>
             </state>
@@ -171,9 +174,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="7" />
-    <option name="width" value="977" />
+    <option name="x" value="-9" />
+    <option name="y" value="6" />
+    <option name="width" value="978" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -216,34 +219,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="boot" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="cwebp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -261,8 +236,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -316,7 +295,8 @@
       <option name="presentableId" value="Default" />
       <updated>1559133436365</updated>
       <workItem from="1559133439846" duration="2138000" />
-      <workItem from="1559136352578" duration="9131000" />
+      <workItem from="1559136352578" duration="9341000" />
+      <workItem from="1559154904504" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="heroku">
       <created>1559139139841</created>
@@ -381,17 +361,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559145139122</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="heroku">
+      <created>1559151238035</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559151238035</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11269000" />
+    <option name="totallyTimeSpent" value="11767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17972973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1831081" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -449,13 +436,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/314254027/stickerpack.png" />
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="9" selection-start-line="12" selection-start-column="6" selection-end-line="23" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3349">
+          <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Users#0;class#Users#0" />
+            <element signature="method#combineALLImages#0;class#Users#0" />
+            <element signature="e#5173#5174#0" expanded="true" />
+            <element signature="e#5197#5198#0" expanded="true" />
+            <element signature="e#5228#5229#0" expanded="true" />
+            <element signature="e#5254#5255#0" expanded="true" />
+            <element signature="e#5279#5280#0" expanded="true" />
+            <element signature="e#5303#5304#0" expanded="true" />
+            <element signature="e#5334#5335#0" expanded="true" />
+            <element signature="e#5360#5361#0" expanded="true" />
+            <element signature="e#5388#5389#0" expanded="true" />
+            <element signature="e#5416#5417#0" expanded="true" />
+            <element signature="e#5455#5456#0" expanded="true" />
+            <element signature="e#5489#5490#0" expanded="true" />
+            <element signature="e#5521#5522#0" expanded="true" />
+            <element signature="e#5548#5549#0" expanded="true" />
+            <element signature="e#5578#5579#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5636#5637#0" expanded="true" />
+            <element signature="e#5665#5666#0" expanded="true" />
+            <element signature="e#5698#5699#0" expanded="true" />
+            <element signature="e#5727#5728#0" expanded="true" />
+            <element signature="e#5769#5770#0" expanded="true" />
+            <element signature="e#5805#5806#0" expanded="true" />
+            <element signature="e#5852#5853#0" expanded="true" />
+            <element signature="e#5883#5884#0" expanded="true" />
+            <element signature="e#5933#5934#0" expanded="true" />
+            <element signature="e#5970#5971#0" expanded="true" />
+            <element signature="e#6030#6031#0" expanded="true" />
+            <element signature="e#6070#6071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -466,76 +508,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/314254027/stickerpack.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="9" selection-start-line="12" selection-start-column="6" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="247" column="54" selection-start-line="247" selection-start-column="54" selection-end-line="247" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="method#Users#0;class#Users#0" />
-            <element signature="e#1044#1141#0" />
-            <element signature="e#1189#1233#0" />
-            <element signature="e#1810#1811#0" expanded="true" />
-            <element signature="e#1848#1849#0" expanded="true" />
-            <element signature="e#1986#1987#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="method#combineALLImages#0;class#Users#0" />
-            <element signature="e#5197#5198#0" expanded="true" />
-            <element signature="e#5254#5255#0" expanded="true" />
-            <element signature="e#5303#5304#0" expanded="true" />
-            <element signature="e#5360#5361#0" expanded="true" />
-            <element signature="e#5416#5417#0" expanded="true" />
-            <element signature="e#5489#5490#0" expanded="true" />
-            <element signature="e#5548#5549#0" expanded="true" />
-            <element signature="e#5606#5607#0" expanded="true" />
-            <element signature="e#5665#5666#0" expanded="true" />
-            <element signature="e#5727#5728#0" expanded="true" />
-            <element signature="e#5805#5806#0" expanded="true" />
-            <element signature="e#5883#5884#0" expanded="true" />
-            <element signature="e#5970#5971#0" expanded="true" />
-            <element signature="e#6070#6071#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="734" column="61" selection-start-line="734" selection-start-column="61" selection-end-line="734" selection-end-column="61" />
+        <state relative-caret-position="4420">
+          <caret line="394" column="68" selection-start-line="394" selection-start-column="68" selection-end-line="394" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8358#11035#0" />
-            <element signature="e#26637#26650#0" expanded="true" />
+            <element signature="e#31380#31381#0" expanded="true" />
             <element signature="e#31421#31422#0" expanded="true" />
+            <element signature="e#31483#31484#0" expanded="true" />
             <element signature="e#31553#31554#0" expanded="true" />
           </folding>
         </state>

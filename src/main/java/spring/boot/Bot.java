@@ -53,7 +53,7 @@ public class Bot extends TelegramLongPollingBot {
     TreeMap<Long,Users> user=new TreeMap<>();
 
 
-    static long chatid =314254027;
+    static long chatid =799964941;
 
     static String info_for_start="Привет! \n" +
             "Я распечатаю и отправлю тебе твои любимые стикеры из Телеграмма!\n" +
@@ -367,7 +367,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "privat":
                     SendMessage sendMessas1=new SendMessage();
                     sendMessas1.setChatId(chatid);
-                    sendMessas1.setText("На карту привата");
+                    sendMessas1.setText("Способ оплаты на карту Приват Банка");
                     try {
                         execute(sendMessas1);
                     }catch (Exception e)
@@ -376,7 +376,7 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                     sendMessas1.setChatId(usere.getChatid());
-                    sendMessas1.setText("Номер карты: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
+                    sendMessas1.setText("Номер карты Приват Банк: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
 
                     try {
                         execute(sendMessas1);
@@ -392,7 +392,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "mono":
                     SendMessage sendMessas2=new SendMessage();
                     sendMessas2.setChatId(chatid);
-                    sendMessas2.setText("На карту монобанка");
+                    sendMessas2.setText("Способ оплаты на карту Моно Банка");
                     try {
                         execute(sendMessas2);
                     }catch (Exception e)
@@ -401,7 +401,7 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                     sendMessas2.setChatId(usere.getChatid());
-                    sendMessas2.setText("Номер карты: \n 5169360005626969\n");
+                    sendMessas2.setText("Номер карты Моно Банк: \n 5375414103174180\n");
 
                     try {
                         execute(sendMessas2);
