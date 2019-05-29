@@ -146,7 +146,7 @@ public class Bot extends TelegramLongPollingBot {
 
                         try {
                             System.out.println("start");
-                            execute( (new SendPhoto().setChatId(own_chatId).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
+                            execute( (new SendPhoto().setChatId(own_chatId).setPhoto(new File("src/main/resources/start.png")).setCaption(info_for_start))
                                     .setReplyMarkup(remakeButtons(message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
