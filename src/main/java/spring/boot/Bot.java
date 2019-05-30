@@ -112,12 +112,7 @@ public class Bot extends TelegramLongPollingBot {
                         }
                         break;
                     case "/start":
-                      try {
 
-                      }catch (Exception e)
-                      {
-                          e.printStackTrace();
-                      }
                         try {
                             sendApiMethod(new SendMessage(usere.getChatid(),"Идет обработка запроса, подождите пожайлуста...."));
                         } catch (TelegramApiException e) {
@@ -276,13 +271,7 @@ public class Bot extends TelegramLongPollingBot {
             {
 
                 case "preview":
-                    if(usere.getStickers().size()<12){
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Идет обработка запроса, подождите пожайлуста...."));
-                        } catch (TelegramApiException e) {
-                            e.printStackTrace();
-                        }
-                    }
+
 
                     System.out.println("about preview"+usere.getCount());
                     try {
@@ -293,11 +282,14 @@ public class Bot extends TelegramLongPollingBot {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    try {
-                        execute(new SendMessage(usere.getChatid(),"Для продолжения оформления StickerPack, отправьте стикер!!"));
-                    } catch (TelegramApiException e) {
-                        e.printStackTrace();
+                    if(usere.getStickers().size()<12){
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продолжения оформления StickerPack, отправьте стикер!!"));
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
                     }
+
                     break;
                 case "enter":
                     count_zakazov+=1;
