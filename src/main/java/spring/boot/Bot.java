@@ -291,7 +291,7 @@ String art="";
         if(update.hasCallbackQuery()){
 
             SendMessage sendMessas12=new SendMessage();
-            sendMessas12.setChatId("314254027");
+            sendMessas12.setChatId(update.getCallbackQuery().getMessage().getChatId());
             sendMessas12.setText("Спосіб оплати на карту ПриватБанка");
             try {
                 execute(sendMessas12);
