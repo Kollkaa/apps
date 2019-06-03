@@ -332,23 +332,28 @@ String art="";
 
                 case "preview":
 
-
+                    if(usere.getStickers().size()<12){
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),art));
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     System.out.println("about preview"+usere.getStickers().size());
                     try {
                         usere.AddPhotoToTemplate();
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!!"));
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
                         execute(usere.getPreview().setChatId(usere.getChatid()));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    if(usere.getStickers().size()<12){
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!!"));
-                        } catch (TelegramApiException e) {
-                            e.printStackTrace();
-                        }
-                    }
+
 
                     break;
                 case "enter":
