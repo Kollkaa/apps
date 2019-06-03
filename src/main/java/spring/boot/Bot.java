@@ -58,14 +58,14 @@ public class Bot extends TelegramLongPollingBot {
 
     static long chatid =799964941;
 
-    static String info_for_start="Привет! \n" +
-            "Я распечатаю и отправлю тебе твои любимые стикеры из Телеграмма!\n" +
+    static String info_for_start="Привіт! \n" +
+            "Я надрукую та доставлю твої улюблені стікери з Telegram!\n!\n" +
             "\n" +
-            "\uD83D\uDC4C 12 стикеров на листе А5\n" +
-            "\uD83D\uDCB3 Стоимость одного набора - 50 грн\n" +
-            "\uD83D\uDCE6 Доставка по всей Украине, удобным для вас способом (оплачивается отедльно)\n" +
+            "\uD83D\uDC4C 12 стікерів на аркуші А5\n" +
+            "\uD83D\uDCB3 Вартість одного набору - 50 грн.\n" +
+            "\uD83D\uDCE6 Доставка по всій Україні, зручним тобі способом (оплачується окремо)\n" +
             "\n" +
-            "Нажми Создать StickerPack  чтобы начать!";
+            "Натисни Створити StickerPack щоб розпочати!";
 
 
 
@@ -114,7 +114,7 @@ public class Bot extends TelegramLongPollingBot {
                     case "/start":
 
                         try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Идет обработка запроса, подождите пожайлуста...."));
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Йде обрабка запиту, зачекайте будь-ласка...."));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
@@ -129,19 +129,19 @@ public class Bot extends TelegramLongPollingBot {
                         }
                         usere.Rebuild();
                         break;
-                    case "О боте":
+                    case "Про бота":
                         System.out.println("about bot");
                         try {
                             sendApiMethod(sendMessage.setText("\n" +
-                                    "С помощью данного бота - стало возможным создать StickerPack из Ваших любимых наборов стикеров!\n" +
-                                    "Все просто, для начала работы с ботом - отправьте любой стикер.\n" +
+                                    "За допомогою даного бота - стало можливим створити StickerPack з твоїх улюблених наборів стікерів!\n" +
+                                    "Все просто, для початку роботи з ботом - надішли будь-який стікер.\n" +
                                     "\n" +
-                                    "По всем вопросам касательно работы данного бота, пишите - @stickers_kiev").setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
+                                    "З усіх питань щодо роботи даного бота, писати сюди - @stickers_kiev").setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
                         break;
-                        case "Создать StickerPack":
+                        case "Створити StickerPack":
 
                         System.out.println("about sdelat maket");
                         try {
@@ -155,7 +155,7 @@ public class Bot extends TelegramLongPollingBot {
                     case "/alex":
                         Message mes1=update.getMessage();
                         SendMessage message1=new SendMessage();
-                        message1.setText("Общее количество заказов: "+ String.valueOf(count_zakazov)+"\n"+"Позитивние отзыви: "+positive_+"\n"+"Негативние отзыви: "+negative_+"\n"+"Не оставили отзыв: "+(count_zakazov-positive_-negative_));
+                        message1.setText("Загальна кількість замовлень : "+ String.valueOf(count_zakazov)+"\n"+"Позитивні відгуки: "+positive_+"\n"+"Негативні відгуки: "+negative_+"\n"+"Не залишили відгук: "+(count_zakazov-positive_-negative_));
                         message1.setChatId(usere.getChatid());
                         try {
                             sendApiMethod(message1);
@@ -175,13 +175,13 @@ public class Bot extends TelegramLongPollingBot {
                         try {
                             if (message.getText()!=null) {
                                 sendMessage.setChatId(chatid);
-                                sendMessage.setText("Данные пользователя :"+usere.getName()+", по заказу №:" +usere.getChatid() +"\n"+message.getText());
+                                sendMessage.setText("Данні користувача :"+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+", по замовленню №:" +usere.getChatid() +"\n"+message.getText());
                                 execute(sendMessage);
                                 execute((sendInlineKeyBoardMessage(usere.getChatid(),3)
-                                        .setText("Выбеите способ оплаты")));
+                                        .setText("Втберіть спосіб оплати")));
                                 user.get(usere.getChatid()).setZakaz();
                             } else {
-                                sendMessage.setText("введите запрос /start ещё раз и повторите создание макета");
+                                sendMessage.setText("Введіть запит /start ще раз и повторіть створення StickerPack");
                                 sendApiMethod(sendMessage.setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                             }
                         } catch (TelegramApiException e) {
@@ -223,7 +223,7 @@ public class Bot extends TelegramLongPollingBot {
 
 
                     try {
-                        sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),1).setText("Свободных мест на листе:  "
+                        sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),1).setText("Вільних місць на листку:  "
                                 + (12 - usere.getCount()) ));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
@@ -236,9 +236,9 @@ public class Bot extends TelegramLongPollingBot {
                         SendMessage sendMessage = new SendMessage();
                         sendMessage.setChatId(usere.getChatid());
 //                       sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),2).setText("Теперь давайте оформим заказ"));
-                        sendApiMethod(sendMessage.setText("1.Для оформления заказа - \"Оформить\".\n" +
-                                "2.Для предосмотра StickerPack - \"Превью\".\n" +
-                                "3.Для создания нового StickerPack - \"Начать сначала\"."));
+                        sendApiMethod(sendMessage.setText("1.Для офрмлення замовлення - \"Оформити\".\n" +
+                                "2.Для перегляду StickerPack - \"Прев'ю\".\n" +
+                                "3.Для створення нового StickerPack - \"Почати спочатку\"."));
 
                         send.setChatId(chatid);
 
@@ -284,7 +284,7 @@ public class Bot extends TelegramLongPollingBot {
                     }
                     if(usere.getStickers().size()<12){
                         try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продолжения оформления StickerPack, отправьте стикер!!"));
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!!"));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
@@ -294,7 +294,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "enter":
                     count_zakazov+=1;
                     try {
-                        execute(sends("Имя Пользователя : "+usere.getName()+"\n"+"Заказ №"+usere.getChatid(),+chatid));
+                        execute(sends("Ім'я Користувача : "+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid(),+chatid));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -304,10 +304,10 @@ public class Bot extends TelegramLongPollingBot {
 
                     SendMessage sendMessage =new SendMessage();
                     sendMessage.setChatId(usere.getChatid());
-                    sendMessage.setText("Для оформления заказа укажите:\n" +
-                            "1) ФИО\n" +
-                            "2) Город доставки\n" +
-                            "3) Номер телефона(Обязательно, иначе мы не сможем с вами связаться..)");
+                    sendMessage.setText("Для оформлення замовлення вкажіть:\n" +
+                            "1) ПІБ\n" +
+                            "2) Місто доставки\n" +
+                            "3) Номер телефону‼️(Інакше ми не зможемо зв’язатися з вами)");
                     try {
                         execute(sendMessage);
                     } catch (TelegramApiException e) {
@@ -319,7 +319,7 @@ public class Bot extends TelegramLongPollingBot {
                         System.out.println("worker photo");
                         usere.AddPhotoToTemplate();
                         execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
-                        execute(new SendMessage().setText("Макет под номером заказа:"+usere.getChatid()).setChatId(chatid));
+                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -337,7 +337,7 @@ public class Bot extends TelegramLongPollingBot {
                     System.out.println("about otmena");
                     try {
                         usere.Rebuild();
-                        execute(new SendMessage().setChatId(usere.getChatid()).setText("Нажмите /start для повторого создания набора!"));
+                        execute(new SendMessage().setChatId(usere.getChatid()).setText("Нажміть /start для повторого створення набору!"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -346,10 +346,10 @@ public class Bot extends TelegramLongPollingBot {
                 case "naloz":
                     SendMessage sendMessa=new SendMessage();
                     sendMessa.setChatId(chatid);
-                    sendMessa.setText("Способ оплаты по заказу №:" + usere.getChatid()+"\n"+"Вид оплаты: При получении");
+                    sendMessa.setText("Спосіб оплати по замовленню №:" + usere.getChatid()+"("+update.getMessage().getChat().getUserName()+")"+"\n"+"Вид оплати: При отриманні");
                     try {
                         execute(sendMessa);
-                        execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам понравился наш сервис \uD83D\uDE80?"));
+                        execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам сподобався наш серіс \uD83D\uDE80?"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -360,7 +360,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "na_carty":
                     SendMessage sendMessa1=new SendMessage();
                     sendMessa1.setChatId(chatid);
-                    sendMessa1.setText("Способ оплаты по заказу №:" + usere.getChatid()+"\n"+"Вид оплаты: На карту");
+                    sendMessa1.setText("Спосіб оплати по замовленню №::" + usere.getChatid()+"\n"+"Вид оплати: На карту");
 
                     try {
                         execute(sendInlineKeyBoardMessage(usere.getChatid(),5).setText("Выбирите банк :"));
@@ -373,7 +373,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "privat":
                     SendMessage sendMessas1=new SendMessage();
                     sendMessas1.setChatId(chatid);
-                    sendMessas1.setText("Способ оплаты на карту Приват Банка");
+                    sendMessas1.setText("Спосіб оплати на карту ПриватБанка");
                     try {
                         execute(sendMessas1);
                     }catch (Exception e)
@@ -382,11 +382,11 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                     sendMessas1.setChatId(usere.getChatid());
-                    sendMessas1.setText("Номер карты ПриватБанк: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
+                    sendMessas1.setText("Номер карти ПриватБанк: \n 5169360005626969\n"+"https://privatbank.ua/ru/sendmoney");
 
                     try {
                         execute(sendMessas1);
-                        execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам понравился наш сервис?"));
+                        execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам сподобався наш сервіс?"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -398,7 +398,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "mono":
                     SendMessage sendMessas2=new SendMessage();
                     sendMessas2.setChatId(chatid);
-                    sendMessas2.setText("Способ оплаты на карту МоноБанка");
+                    sendMessas2.setText("Спосіб оплати на карту МоноБанка");
                     try {
                         execute(sendMessas2);
                     }catch (Exception e)
@@ -407,11 +407,11 @@ public class Bot extends TelegramLongPollingBot {
                     }
 
                     sendMessas2.setChatId(usere.getChatid());
-                    sendMessas2.setText("Номер карты Моно Банк: \n 5375414103174180\n");
+                    sendMessas2.setText("Номер карти Моно Банк: \n 5375414103174180\n");
 
                     try {
                         execute(sendMessas2);
-                        execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам понравился наш сервис?"));
+                        execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам сподобався наш сервіс?"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -419,15 +419,15 @@ public class Bot extends TelegramLongPollingBot {
                     break;
                 case "yes":
                     try {
-                        sendApiMethod(new SendMessage(usere.getChatid(),"Спасибо за Ваш отзыв!\n" +
-                                "Мы свяжемся с Вами в ближайшее время, для создания еще одного набора - нажимте /start"));
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Дякуємо за відгук!\n" +
+                                "Ми зв'яжемося з тобою найближчим часом. Для створення ще одного набору - натисни /start"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                     positive_+=1;
 
                     try {
-                        execute(sends(usere.getName()+": "+usere.getChatid()+" Этому пользователю понравился сервис ",chatid ));
+                        execute(sends(usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс ",chatid ));
                         execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
                                 .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
@@ -436,8 +436,8 @@ public class Bot extends TelegramLongPollingBot {
                     break;
                 case"no":
                     try {
-                        sendApiMethod(new SendMessage(usere.getChatid(),"Спасибо за Ваш отзыв!\n" +
-                                "Мы свяжемся с Вами в ближайшее время, для создания еще одного набора - нажимте /start"));
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Дякуємо за відгук!\n" +
+                                "Ми зв'яжемося з тобою найближчим часом. Для створення ще одного набору - натисни /start"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -499,11 +499,11 @@ public class Bot extends TelegramLongPollingBot {
             InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
             InlineKeyboardButton inlineKeyboardButton3 = new InlineKeyboardButton();
 
-            inlineKeyboardButton1.setText("Превью \uD83D\uDDBC");
+            inlineKeyboardButton1.setText("Прев'ю \uD83D\uDDBC");
             inlineKeyboardButton1.setCallbackData("preview");
-            inlineKeyboardButton2.setText("Оформить ✅");
+            inlineKeyboardButton2.setText("Оформити ✅");
             inlineKeyboardButton2.setCallbackData("enter");
-            inlineKeyboardButton3.setText("Начать сначала ↩️");
+            inlineKeyboardButton3.setText("Почати спочатку ↩️");
             inlineKeyboardButton3.setCallbackData("otmena");
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
             List<InlineKeyboardButton> keyboardButtonsRow2 = new ArrayList<>();
@@ -518,7 +518,7 @@ public class Bot extends TelegramLongPollingBot {
         if(n==2)
         {
             InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
-            inlineKeyboardButton1.setText("Оформить ✅");
+            inlineKeyboardButton1.setText("Оформити ✅");
             inlineKeyboardButton1.setCallbackData("enter");
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
             keyboardButtonsRow1.add(inlineKeyboardButton1);
@@ -530,7 +530,7 @@ public class Bot extends TelegramLongPollingBot {
         {
             InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
             InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-            inlineKeyboardButton1.setText("При получении \uD83D\uDECD");
+            inlineKeyboardButton1.setText("При отриманні \uD83D\uDECD");
             inlineKeyboardButton1.setCallbackData("naloz");
             inlineKeyboardButton2.setText("На карту \uD83D\uDCB3 ");
             inlineKeyboardButton2.setCallbackData("na_carty");
@@ -565,9 +565,9 @@ public class Bot extends TelegramLongPollingBot {
         {
             InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
             InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-            inlineKeyboardButton1.setText("Приват банк");
+            inlineKeyboardButton1.setText("Приватбанк");
             inlineKeyboardButton1.setCallbackData("privat");
-            inlineKeyboardButton2.setText("Моно банк");
+            inlineKeyboardButton2.setText("Монобанк");
             inlineKeyboardButton2.setCallbackData("mono");
 
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
@@ -614,8 +614,8 @@ public class Bot extends TelegramLongPollingBot {
         KeyboardRow keyboardRow1 = new KeyboardRow();
         KeyboardButton keyboardButton1 = new KeyboardButton();
         KeyboardButton keyboardButton2 = new KeyboardButton();
-        keyboardButton1.setText("О боте");
-        keyboardButton2.setText("Создать StickerPack");
+        keyboardButton1.setText("Про бота");
+        keyboardButton2.setText("Створити StickerPack");
         keyboardRow1.add(keyboardButton1);
         keyboardRow1.add(keyboardButton2);
         List<KeyboardRow> klava = new ArrayList<KeyboardRow>();
@@ -634,9 +634,9 @@ public class Bot extends TelegramLongPollingBot {
                 return replyKeyboardMarkup;
             case "/start":
                 return replyKeyboardMarkup;
-            case "О боте":
+            case "Про бота":
                 keyboardRow1.clear();
-                keyboardRow1.add(keyboardButton1.setText("Создать StickerPack"));
+                keyboardRow1.add(keyboardButton1.setText("Створити StickerPack"));
                 return replyKeyboardMarkup;
             case "/all":
                 keyboardRow1.clear();
@@ -645,8 +645,8 @@ public class Bot extends TelegramLongPollingBot {
                 return replyKeyboardMarkup;
             case "/yes/no":
                 keyboardRow1.clear();
-                keyboardButton1.setText("да");
-                keyboardButton2.setText("нет");
+                keyboardButton1.setText("Так");
+                keyboardButton2.setText("Ні");
                 keyboardRow1.add(keyboardButton1);
                 keyboardRow1.add(keyboardButton2);
                 return replyKeyboardMarkup;
@@ -654,10 +654,10 @@ public class Bot extends TelegramLongPollingBot {
                 keyboardRow1.clear();
                 keyboardRow1.add(keyboardButton2.setText("Осталось " + n + "/12"));
                 return replyKeyboardMarkup;
-            case "Оформить":
+            case "Оформити":
                 keyboardRow1.clear();
-                keyboardButton1.setText("О боте");
-                keyboardButton2.setText("Создать StickerPack");
+                keyboardButton1.setText("Про бота");
+                keyboardButton2.setText("Створити StickerPack");
                 keyboardRow1.add(keyboardButton1);
                 keyboardRow1.add(keyboardButton2);
                 return replyKeyboardMarkup;
