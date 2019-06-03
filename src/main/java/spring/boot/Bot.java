@@ -295,45 +295,32 @@ String art="";
                 user.put(update.getCallbackQuery().getMessage().getChatId(), new Users(update.getCallbackQuery().getMessage().getChatId(), new ArrayList<Sticker>(), update.getCallbackQuery().getMessage().getFrom().getFirstName()));
                 usere=user.get(update.getCallbackQuery().getMessage().getChatId());
             }
-
+            SendMessage sendMessas12=new SendMessage();
+            sendMessas12.setChatId("314254027");
+            sendMessas12.setText("Спосіб оплати на карту ПриватБанка");
+            try {
+                execute(sendMessas12);
+            }catch (Exception e)
+            {
+                System.out.println(e.getStackTrace());
+            }
 
             switch (update.getCallbackQuery().getData())
             {
 
                 case "preview":
 
-                    try {
-                        sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!11111!"));
-                    } catch (TelegramApiException e) {
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),e.getMessage()));
-                        } catch (TelegramApiException ex) {
-                            ex.printStackTrace();
-                        }
-                        e.printStackTrace();
-                    }
+
                     System.out.println("about preview"+usere.getStickers().size());
                     try {
                         usere.AddPhotoToTemplate();
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!22222!"));
-                        } catch (TelegramApiException e) {
-                            e.printStackTrace();
-                        }
+
                         execute(usere.getPreview().setChatId(usere.getChatid()));
                     } catch (TelegramApiException e) {
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),e.getMessage()));
-                        } catch (TelegramApiException ex) {
-                            ex.printStackTrace();
-                        }
+
                         e.printStackTrace();
                     } catch (IOException e) {
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),e.getMessage()));
-                        } catch (TelegramApiException ex) {
-                            ex.printStackTrace();
-                        }
+
                         e.printStackTrace();
                     }
 
