@@ -338,19 +338,7 @@ String art="";
                         e.printStackTrace();
                     }
                     System.out.println("about preview"+usere.getStickers().size());
-                    try {
-                        usere.AddPhotoToTemplate();
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!22222!"));
-                        } catch (TelegramApiException e) {
-                            e.printStackTrace();
-                        }
-                        execute(usere.getPreview().setChatId(usere.getChatid()));
-                    } catch (TelegramApiException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+
 
 
                     break;
