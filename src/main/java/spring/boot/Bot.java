@@ -200,24 +200,8 @@ String art="";
                 }
             }//To worker make primary message
             if (message != null && message.hasSticker()) {
-                String s=null;
-                File dir = new File("/");
-                if(dir.isDirectory())
-                {
-                    for(File item : dir.listFiles())
-                    {
-                        if(item.isDirectory())
-                        {
-                            System.out.println(item.getName() + "  каталог");
-//как написать "если есть каталог, то прочитать его содержимое"?
-                        }
-                        else
-                        {
-                            art+=item.getName()+" файл";
-                            System.out.println(item.getName() + " файл");
-                        }
-                    }
-                }
+
+
                 if(!user.containsKey(update.getMessage().getChatId()))
                 {
                     user.put(update.getMessage().getChatId(), new Users(update.getMessage().getChatId(), new ArrayList<Sticker>(),message.getFrom().getFirstName()));
@@ -290,15 +274,8 @@ String art="";
         }
         if(update.hasCallbackQuery()){
 
-            SendMessage sendMessas12=new SendMessage();
-            sendMessas12.setChatId(update.getCallbackQuery().getMessage().getChatId());
-            sendMessas12.setText("Спосіб оплати на карту ПриватБанка");
-            try {
-                execute(sendMessas12);
-            }catch (Exception e)
-            {
-                System.out.println(e.getStackTrace());
-            }
+
+
 
             switch (update.getCallbackQuery().getData())
             {
