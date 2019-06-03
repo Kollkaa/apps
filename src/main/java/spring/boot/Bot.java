@@ -289,12 +289,7 @@ String art="";
             } //To worker make stickers messege
         }
         if(update.hasCallbackQuery()){
-            if(user.containsKey(update.getCallbackQuery().getMessage().getChatId()))
-                usere=user.get(update.getCallbackQuery().getMessage().getChatId());
-            else {
-                user.put(update.getCallbackQuery().getMessage().getChatId(), new Users(update.getCallbackQuery().getMessage().getChatId(), new ArrayList<Sticker>(), update.getCallbackQuery().getMessage().getFrom().getFirstName()));
-                usere=user.get(update.getCallbackQuery().getMessage().getChatId());
-            }
+
             SendMessage sendMessas12=new SendMessage();
             sendMessas12.setChatId("314254027");
             sendMessas12.setText("Спосіб оплати на карту ПриватБанка");
