@@ -147,7 +147,7 @@ public class Bot extends TelegramLongPollingBot {
                         try {
                             usere.setStickers( new ArrayList<Sticker>());
                             usere.setZakaz();
-                            sendApiMethod(sendMessage.setText("Отправьте первый стикер").setReplyMarkup(remakeButtons(usere,"hide", replyKeyboardMarkup, usere.getStickers().size())));
+                            sendApiMethod(sendMessage.setText("Відправте перший стікер").setReplyMarkup(remakeButtons(usere,"hide", replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
@@ -178,7 +178,7 @@ public class Bot extends TelegramLongPollingBot {
                                 sendMessage.setText("Данні користувача :"+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+", по замовленню №:" +usere.getChatid() +"\n"+message.getText());
                                 execute(sendMessage);
                                 execute((sendInlineKeyBoardMessage(usere.getChatid(),3)
-                                        .setText("Втберіть спосіб оплати")));
+                                        .setText("Виберіть спосіб оплати")));
                                 user.get(usere.getChatid()).setZakaz();
                             } else {
                                 sendMessage.setText("Введіть запит /start ще раз и повторіть створення StickerPack");
@@ -363,7 +363,7 @@ public class Bot extends TelegramLongPollingBot {
                     sendMessa1.setText("Спосіб оплати по замовленню №::" + usere.getChatid()+"\n"+"Вид оплати: На карту");
 
                     try {
-                        execute(sendInlineKeyBoardMessage(usere.getChatid(),5).setText("Выбирите банк :"));
+                        execute(sendInlineKeyBoardMessage(usere.getChatid(),5).setText("Вибеіть банк :"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
