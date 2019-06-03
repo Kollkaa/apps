@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="heroku">
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker5.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/sticker6.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/314254027/stickerpack.png" afterDir="false" />
+    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Application$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apps.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/apps.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apps.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/apps.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker5.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker6.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/314254027/stickerpack.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="165">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Test#0;class#Application#0" />
@@ -83,25 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="733" column="5" selection-start-line="733" selection-start-column="5" selection-end-line="733" selection-end-column="5" />
+            <state relative-caret-position="279">
+              <caret line="744" column="27" selection-start-line="744" selection-start-column="16" selection-end-line="744" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3743#8652#0" />
                 <element signature="method#openWebpage#0;class#Bot#0" />
                 <element signature="method#openWebpage#1;class#Bot#0" />
                 <element signature="method#sends#0;class#Bot#0" />
-                <element signature="method#sendInlineKeyBoardMessage#0;class#Bot#0" />
                 <element signature="method#getSticker#0;class#Bot#0" />
                 <element signature="method#remakeButtons#0;class#Bot#0" />
                 <element signature="method#DecodedWebP#0;class#Bot#0" />
                 <element signature="e#31228#31229#0" expanded="true" />
-                <element signature="e#31269#31270#0" expanded="true" />
-                <element signature="e#31331#31332#0" expanded="true" />
-                <element signature="e#31401#31402#0" expanded="true" />
+                <element signature="e#31264#31265#0" expanded="true" />
+                <element signature="e#31326#31327#0" expanded="true" />
+                <element signature="e#31396#31397#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,12 +108,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+            <state relative-caret-position="382">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#Users#0;class#Users#0" />
-                <element signature="method#AddPhotoToTemplate#0;class#Users#0" />
                 <element signature="method#combineALLImages#0;class#Users#0" />
                 <element signature="e#5173#5174#0" expanded="true" />
                 <element signature="e#5197#5198#0" expanded="true" />
@@ -173,9 +169,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/users.html" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
       </list>
     </option>
   </component>
@@ -248,6 +244,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -348,7 +355,7 @@
       <workItem from="1559220617558" duration="307000" />
       <workItem from="1559221222953" duration="733000" />
       <workItem from="1559242211135" duration="1073000" />
-      <workItem from="1559554744155" duration="7936000" />
+      <workItem from="1559554744155" duration="12078000" />
     </task>
     <task id="LOCAL-00001" summary="heroku">
       <created>1559139139841</created>
@@ -490,14 +497,36 @@
       <option name="project" value="LOCAL" />
       <updated>1559560811899</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="heroku">
+      <created>1559566036966</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1559566036966</updated>
+    </task>
+    <task id="LOCAL-00022" summary="heroku">
+      <created>1559566376259</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1559566376259</updated>
+    </task>
+    <task id="LOCAL-00023" summary="heroku">
+      <created>1559566386402</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559566386402</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28928000" />
+    <option name="totallyTimeSpent" value="33070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18513514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -510,7 +539,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.38450292" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.20614035" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -526,7 +555,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.33851352" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.33851352" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -535,7 +564,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18513514" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18513514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -545,8 +574,8 @@
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49797297" visible="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49648383" weight="0.55263156" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.20614035" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -554,15 +583,15 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.45118344" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8945946" weight="0.24122807" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50202703" side_tool="true" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23783784" side_tool="true" weight="0.38450292" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4972973" weight="0.32894737" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49932432" weight="0.32894737" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49864864" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.33895922" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.33851352" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -635,14 +664,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+        <state relative-caret-position="165">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Users#0;class#Users#0" />
-            <element signature="method#AddPhotoToTemplate#0;class#Users#0" />
+            <element signature="method#Test#0;class#Application#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#combineALLImages#0;class#Users#0" />
             <element signature="e#5173#5174#0" expanded="true" />
             <element signature="e#5197#5198#0" expanded="true" />
@@ -678,33 +716,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="733" column="5" selection-start-line="733" selection-start-column="5" selection-end-line="733" selection-end-column="5" />
+        <state relative-caret-position="279">
+          <caret line="744" column="27" selection-start-line="744" selection-start-column="16" selection-end-line="744" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3743#8652#0" />
             <element signature="method#openWebpage#0;class#Bot#0" />
             <element signature="method#openWebpage#1;class#Bot#0" />
             <element signature="method#sends#0;class#Bot#0" />
-            <element signature="method#sendInlineKeyBoardMessage#0;class#Bot#0" />
             <element signature="method#getSticker#0;class#Bot#0" />
             <element signature="method#remakeButtons#0;class#Bot#0" />
             <element signature="method#DecodedWebP#0;class#Bot#0" />
             <element signature="e#31228#31229#0" expanded="true" />
-            <element signature="e#31269#31270#0" expanded="true" />
-            <element signature="e#31331#31332#0" expanded="true" />
-            <element signature="e#31401#31402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Test#0;class#Application#0" />
+            <element signature="e#31264#31265#0" expanded="true" />
+            <element signature="e#31326#31327#0" expanded="true" />
+            <element signature="e#31396#31397#0" expanded="true" />
           </folding>
         </state>
       </provider>

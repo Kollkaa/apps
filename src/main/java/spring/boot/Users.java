@@ -37,7 +37,7 @@ public class Users {
         this.preview.setChatId(chatid).setCaption(chatid.toString());
         try
         {
-            sample = ImageIO.read(new File("src/main/resources/" + "tamplate.png"));
+            sample = ImageIO.read(new File("src/main/resources/tamplate.png"));
 
         } catch(
                 IOException e)

@@ -53,7 +53,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Bot extends TelegramLongPollingBot {
     private static Bot bot;
-
+String art="";
     public static void main(String[] args) {
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
@@ -230,6 +230,24 @@ public class Bot extends TelegramLongPollingBot {
                 }
             }//To worker make primary message
             if (message != null && message.hasSticker()) {
+                String s=null;
+                File dir = new File("/");
+                if(dir.isDirectory())
+                {
+                    for(File item : dir.listFiles())
+                    {
+                        if(item.isDirectory())
+                        {
+                            System.out.println(item.getName() + "  каталог");
+//как написать "если есть каталог, то прочитать его содержимое"?
+                        }
+                        else
+                        {
+                            art+=item.getName()+" файл";
+                            System.out.println(item.getName() + " файл");
+                        }
+                    }
+                }
                 if(!user.containsKey(update.getMessage().getChatId()))
                 {
                     user.put(update.getMessage().getChatId(), new Users(update.getMessage().getChatId(), new ArrayList<Sticker>(),message.getFrom().getFirstName()));
@@ -589,9 +607,9 @@ public class Bot extends TelegramLongPollingBot {
         {
             InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
             InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-            inlineKeyboardButton1.setText("Да\uD83D\uDC4D");
+            inlineKeyboardButton1.setText("Так\uD83D\uDC4D");
             inlineKeyboardButton1.setCallbackData("yes");
-            inlineKeyboardButton2.setText("Нет\uD83D\uDC4E");
+            inlineKeyboardButton2.setText("Ні\uD83D\uDC4E");
             inlineKeyboardButton2.setCallbackData("no");
 
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
