@@ -52,39 +52,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Bot extends TelegramLongPollingBot {
-    private static Bot bot;
+
 String art="";
-    public static void main(String[] args) {
-        ApiContextInitializer.init();
-        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-        System.out.println("contunie");
-        try//
-        {
-            bot=new Bot();
-            telegramBotsApi.registerBot(bot);
 
-
-        } catch (TelegramApiRequestException e) {
-            e.printStackTrace();
-        }
-
-        /*ses.scheduleWithFixedDelay(new Runnable() {
-            @Override
-            public void run() {
-
-                try {
-              //     Test();
-
-                }catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-                System.out.println("1111111111111111111111111111");
-            }
-        }, 0, 20, TimeUnit.MINUTES);
-        */
-
-    }
     int count_zakazov;
     int positive_=0;
     int negative_=0;
@@ -335,17 +305,44 @@ String art="";
                     try {
                         sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!11111!"));
                     } catch (TelegramApiException e) {
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),e.getMessage()));
+                        } catch (TelegramApiException ex) {
+                            ex.printStackTrace();
+                        }
                         e.printStackTrace();
                     }
                     System.out.println("about preview"+usere.getStickers().size());
-
+                    try {
+                        usere.AddPhotoToTemplate();
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!22222!"));
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
+                        execute(usere.getPreview().setChatId(usere.getChatid()));
+                    } catch (TelegramApiException e) {
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),e.getMessage()));
+                        } catch (TelegramApiException ex) {
+                            ex.printStackTrace();
+                        }
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        try {
+                            sendApiMethod(new SendMessage(usere.getChatid(),e.getMessage()));
+                        } catch (TelegramApiException ex) {
+                            ex.printStackTrace();
+                        }
+                        e.printStackTrace();
+                    }
 
 
                     break;
                 case "enter":
                     count_zakazov+=1;
                     try {
-                        execute(sends("Ім'я Користувача : "+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid(),+chatid));
+                        execute(sends("Ім'я Користувача : "+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid(),chatid));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
