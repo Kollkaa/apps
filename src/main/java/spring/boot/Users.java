@@ -94,7 +94,7 @@ public class Users {
         File final_Image = new File(this.screenName+"stickerpack.png");
         finalImg = new BufferedImage(sample.getWidth() * 1, sample.getHeight() * 1, sample.getType());
         returnes_x_y();
-        for(int i=1;i<=getCount();i++){
+        for(int i=1;i<=getStickers().size();i++){
             int wid=sample.getWidth()/3;
             int hei=sample.getWidth()/4;
             try {
@@ -112,12 +112,6 @@ public class Users {
 
                 finalImg.createGraphics().drawImage(temp, getX(),getY() , null);
                 setX(getX()+wid);
-
-
-
-
-
-
             }
 
 

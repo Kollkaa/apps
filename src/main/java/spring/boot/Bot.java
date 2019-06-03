@@ -7,7 +7,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import io.github.biezhi.webp.WebpIO;
+import org.springframework.boot.SpringApplication;
+import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.GetFile;
 import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -23,6 +26,8 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import org.telegram.telegrambots.meta.api.objects.stickers.Sticker;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.apache.commons.io.FileUtils;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
+
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
@@ -44,8 +49,42 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 
-public class Bot extends TelegramLongPollingBot {
 
+
+public class Bot extends TelegramLongPollingBot {
+    private static Bot bot;
+
+    public static void main(String[] args) {
+        ApiContextInitializer.init();
+        TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
+        System.out.println("contunie");
+        try//
+        {
+            bot=new Bot();
+            telegramBotsApi.registerBot(bot);
+
+
+        } catch (TelegramApiRequestException e) {
+            e.printStackTrace();
+        }
+
+        /*ses.scheduleWithFixedDelay(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+              //     Test();
+
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+                System.out.println("1111111111111111111111111111");
+            }
+        }, 0, 20, TimeUnit.MINUTES);
+        */
+
+    }
     int count_zakazov;
     int positive_=0;
     int negative_=0;
@@ -212,21 +251,24 @@ public class Bot extends TelegramLongPollingBot {
                         getSticker(message, usere.getStickers().size(),usere);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
+                        System.out.println("!111!!");
                     }
                     try {
-                        usere.setCount(usere.getCount()+1);
-                        DecodedWebP(usere,usere.getCount());
+
+                        DecodedWebP(usere,usere.getStickers().size());
 
                     } catch (IOException e) {
                         e.printStackTrace();
+                        System.out.println("!!213!");
                     }
 
 
                     try {
                         sendApiMethod(sendInlineKeyBoardMessage(usere.getChatid(),1).setText("Вільних місць на листку:  "
-                                + (12 - usere.getCount()) ));
+                                + (12 - usere.getStickers().size()) ));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
+                        System.out.println("4312412");
                     }
                 }
                 if (usere.getStickers().size() >= 12) {
@@ -273,7 +315,7 @@ public class Bot extends TelegramLongPollingBot {
                 case "preview":
 
 
-                    System.out.println("about preview"+usere.getCount());
+                    System.out.println("about preview"+usere.getStickers().size());
                     try {
                         usere.AddPhotoToTemplate();
                         execute(usere.getPreview().setChatId(usere.getChatid()));

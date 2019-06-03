@@ -39,7 +39,7 @@ public class Application {
             public void run() {
 
                 try {
-                   Test();
+              //     Test();
 
                 }catch (Exception e)
                 {
@@ -47,7 +47,9 @@ public class Application {
                 }
                 System.out.println("1111111111111111111111111111");
             }
-        }, 0, 10, TimeUnit.MINUTES);
+        }, 0, 20, TimeUnit.MINUTES);
+
+
     }
     public static void Test()
     {
