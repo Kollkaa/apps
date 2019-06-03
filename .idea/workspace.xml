@@ -4,24 +4,6 @@
     <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apps.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/apps.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apps.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/apps.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker4.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker5.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/sticker6.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/314254027/stickerpack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -85,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="744" column="27" selection-start-line="744" selection-start-column="16" selection-end-line="744" selection-end-column="27" />
+            <state relative-caret-position="263">
+              <caret line="328" lean-forward="true" selection-start-line="328" selection-end-line="328" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3743#8652#0" />
@@ -170,8 +152,8 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/users.html" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" />
       </list>
     </option>
   </component>
@@ -355,7 +337,7 @@
       <workItem from="1559220617558" duration="307000" />
       <workItem from="1559221222953" duration="733000" />
       <workItem from="1559242211135" duration="1073000" />
-      <workItem from="1559554744155" duration="12078000" />
+      <workItem from="1559554744155" duration="12710000" />
     </task>
     <task id="LOCAL-00001" summary="heroku">
       <created>1559139139841</created>
@@ -518,11 +500,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559566386402</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="heroku">
+      <created>1559572713401</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1559572713401</updated>
+    </task>
+    <task id="LOCAL-00025" summary="heroku">
+      <created>1559573058380</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1559573058380</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33070000" />
+    <option name="totallyTimeSpent" value="33702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -716,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="744" column="27" selection-start-line="744" selection-start-column="16" selection-end-line="744" selection-end-column="27" />
+        <state relative-caret-position="263">
+          <caret line="328" lean-forward="true" selection-start-line="328" selection-end-line="328" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3743#8652#0" />

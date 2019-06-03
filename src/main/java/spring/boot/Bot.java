@@ -334,7 +334,7 @@ String art="";
 
                     if(usere.getStickers().size()<12){
                         try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),art));
+                            sendApiMethod(new SendMessage(usere.getChatid(),"Для продовження оформлення StickerPack, відправте стікер!!"));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
