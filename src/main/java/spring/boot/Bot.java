@@ -427,7 +427,7 @@ String art="";
                     break;
                 case "yes":
                     try {
-                        sendApiMethod(new SendMessage(chatid,"Дякуємо за відгук!\n" +
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Дякуємо за відгук!\n" +
                                 "Ми зв'яжемося з тобою найближчим часом. Для створення ще одного набору - натисни /start"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
@@ -435,7 +435,7 @@ String art="";
                     positive_+=1;
 
                     try {
-                        execute(new SendMessage().setChatId(usere.getChatid()).setText(usere.getName()+"("+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс "+chatid ));
+                        execute(new SendMessage().setChatId(chatid).setText(usere.getName()+"("+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс "+chatid ));
                         execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
                                 .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
@@ -444,14 +444,14 @@ String art="";
                     break;
                 case"no":
                     try {
-                        sendApiMethod(new SendMessage(chatid,"Дякуємо за відгук!\n" +
+                        sendApiMethod(new SendMessage(usere.getChatid(),"Дякуємо за відгук!\n" +
                                 "Ми зв'яжемося з тобою найближчим часом. Для створення ще одного набору - натисни /start"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                     negative_+=1;
                     try {
-                        execute(new SendMessage().setChatId(usere.getChatid()).setText(" Этому пользователю не понравился сервис "+chatid));
+                        execute(new SendMessage().setChatId(chatid).setText(" Этому пользователю не понравился сервис "+chatid));
                         execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
                                 .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
