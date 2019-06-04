@@ -353,7 +353,7 @@ String art="";
                 case "naloz":
                     SendMessage sendMessa=new SendMessage();
                     sendMessa.setChatId(chatid);
-                    sendMessa.setText("Спосіб оплати по замовленню №:" + usere.getChatid()+"("+update.getMessage().getChat().getUserName()+")"+"\n"+"Вид оплати: При отриманні");
+                    sendMessa.setText("Спосіб оплати по замовленню №:" + usere.getChatid()+"("+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+"\n"+"Вид оплати: При отриманні");
                     try {
                         execute(sendMessa);
                         execute(sendInlineKeyBoardMessage(usere.getChatid(),4).setText("Вам сподобався наш серіс \uD83D\uDE80?"));
@@ -434,7 +434,7 @@ String art="";
                     positive_+=1;
 
                     try {
-                        execute(new SendMessage().setChatId(usere.getChatid()).setText(usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс "+chatid ));
+                        execute(new SendMessage().setChatId(usere.getChatid()).setText(usere.getName()+"("+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс "+chatid ));
                         execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
                                 .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
