@@ -301,7 +301,8 @@ String art="";
                 case "enter":
                     count_zakazov+=1;
                  try {
-                        execute(sends("Ім'я Користувача : "+usere.getName()+"()"+"\n"+"Замовлення №"+usere.getChatid(),chatid));
+
+                     execute(new SendMessage().setChatId(chatid).setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid()));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -329,7 +330,7 @@ String art="";
                         System.out.println("maket ready");
                         execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
                         System.out.println("this all");
-                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"));
+                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")").setChatId(chatid));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -437,7 +438,7 @@ String art="";
                     positive_+=1;
 
                     try {
-                        execute(sends(usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс ",chatid ));
+                        execute(new SendMessage().setChatId(usere.getChatid()).setText(usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+": "+usere.getChatid()+" Цьому користувачу сподобався сервіс "+chatid ));
                         execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
                                 .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
@@ -453,7 +454,7 @@ String art="";
                     }
                     negative_+=1;
                     try {
-                        execute(sends( usere.getChatid()+" Этому пользователю не понравился сервис ",chatid));
+                        execute(new SendMessage().setChatId(usere.getChatid()).setText(" Этому пользователю не понравился сервис "+chatid));
                         execute( (new SendPhoto().setChatId(usere.getChatid()).setPhoto(new File("src/main/resources/start.jpg")).setCaption(info_for_start))
                                 .setReplyMarkup(remakeButtons(usere,"/start", replyKeyboardMarkup, usere.getStickers().size())));
                     } catch (TelegramApiException e) {
@@ -489,14 +490,7 @@ String art="";
         return false;
     }
     //Send primary message
-    public SendMessage sends(String s,Long chat){
-        SendMessage ser=new SendMessage();
-        ser.setChatId(chat);
-        ser.setText(s);
-        return ser;
 
-
-    }
     //Rebuild all pictures to new
 
     //Remake inlineButtons
