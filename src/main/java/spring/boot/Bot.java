@@ -68,7 +68,7 @@ String art="";
     static long chatid =314254027;
 
     static String info_for_start="Привіт! \n" +
-            "Я надрукую та доставлю твої улюблені стікери з Telegram!\n!\n" +
+            "Я надрукую та доставлю твої улюблені стікери з Telegram!\n" +
             "\n" +
             "\uD83D\uDC4C 12 стікерів на аркуші А5\n" +
             "\uD83D\uDCB3 Вартість одного набору - 50 грн.\n" +
@@ -298,7 +298,7 @@ String art="";
                     count_zakazov+=1;
                  try {
 
-                    sendApiMethod(new SendMessage().setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №").setChatId(chatid));
+                    sendApiMethod(new SendMessage().setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid()).setChatId(chatid));
                 } catch (TelegramApiException e) {
                     e.printStackTrace();
                 }
