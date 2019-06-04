@@ -371,7 +371,7 @@ String art="";
                     sendMessa1.setText("Спосіб оплати по замовленню №::" + usere.getChatid()+"\n"+"Вид оплати: На карту");
 
                     try {
-                        execute(sendInlineKeyBoardMessage(usere.getChatid(),5).setText("Вибеіть банк :"));
+                        execute(sendInlineKeyBoardMessage(usere.getChatid(),5).setText("Виберіть банк :"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
@@ -566,9 +566,9 @@ String art="";
         {
             InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
             InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-            inlineKeyboardButton1.setText("Приватбанк");
+            inlineKeyboardButton1.setText("ПриватБанк");
             inlineKeyboardButton1.setCallbackData("privat");
-            inlineKeyboardButton2.setText("Монобанк");
+            inlineKeyboardButton2.setText("МоноБанк");
             inlineKeyboardButton2.setCallbackData("mono");
 
             List<InlineKeyboardButton> keyboardButtonsRow1 = new ArrayList<>();
