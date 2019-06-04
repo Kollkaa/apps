@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots</artifactId>
-            <version>LATEST</version>
+            <version>4.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.jsoup</groupId>
