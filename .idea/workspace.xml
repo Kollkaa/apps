@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="" />
+    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apps.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/apps.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apps.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/apps.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="32" column="27" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="27" />
+            <state relative-caret-position="98">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding>
                 <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" />
               </folding>
@@ -142,12 +148,12 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Applecation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/app.html" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/users.html" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -209,22 +215,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
@@ -332,7 +322,7 @@
       <workItem from="1559220617558" duration="307000" />
       <workItem from="1559221222953" duration="733000" />
       <workItem from="1559242211135" duration="1073000" />
-      <workItem from="1559554744155" duration="16338000" />
+      <workItem from="1559554744155" duration="17278000" />
     </task>
     <task id="LOCAL-00001" summary="heroku">
       <created>1559139139841</created>
@@ -572,17 +562,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559627009461</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="heroku">
+      <created>1559627640382</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1559627640382</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37330000" />
+    <option name="totallyTimeSpent" value="38270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27094594" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27094594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -593,7 +590,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.24269006" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76216215" weight="0.48391813" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.28947368" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -609,7 +606,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.33851352" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.10067567" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -691,16 +688,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/app.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/telegram/telegrambots-meta/4.2/telegrambots-meta-4.2-sources.jar!/org/telegram/telegrambots/meta/api/methods/updates/GetUpdates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -747,20 +734,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="60" selection-start-line="59" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="27" />
+        <state relative-caret-position="98">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
           <folding>
             <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="60" selection-start-line="59" selection-end-line="60" />
+        <state>
+          <caret selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

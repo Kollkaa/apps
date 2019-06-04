@@ -300,11 +300,13 @@ String art="";
                     break;
                 case "enter":
                     count_zakazov+=1;
-                    try {
+                  /*  try {
                         execute(sends("Ім'я Користувача : "+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid(),chatid));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
+
+                   */
                     usere.setZakaz(usere.getZakaz()+1);
 
                     System.out.println("about enter");
