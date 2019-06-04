@@ -39,7 +39,7 @@ public class Application {
             public void run() {
 
                 try {
-              //     Test();
+                   Test();
 
                 }catch (Exception e)
                 {
