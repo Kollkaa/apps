@@ -65,7 +65,7 @@ String art="";
     TreeMap<Long,Users> user=new TreeMap<>();
 
 
-    static long chatid =799964941;
+    static long chatid =314254027;
 
     static String info_for_start="Привіт! \n" +
             "Я надрукую та доставлю твої улюблені стікери з Telegram!\n!\n" +
@@ -327,7 +327,9 @@ String art="";
 
                         System.out.println("worker photo");
                         usere.AddPhotoToTemplate();
+                        System.out.println("maket ready");
                         execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
+                        System.out.println("this all");
                         execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
