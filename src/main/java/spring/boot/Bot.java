@@ -273,10 +273,6 @@ String art="";
             } //To worker make stickers messege
         }
         if(update.hasCallbackQuery()){
-
-
-
-
             switch (update.getCallbackQuery().getData())
             {
 
@@ -302,7 +298,7 @@ String art="";
                     count_zakazov+=1;
                  try {
 
-                    sendApiMethod(new SendMessage().setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №").setChatId(chatid));
+                    sendApiMethod(new SendMessage().setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getCallbackQuery().getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №").setChatId(chatid));
                 } catch (TelegramApiException e) {
                     e.printStackTrace();
                 }
@@ -330,7 +326,7 @@ String art="";
                         System.out.println("maket ready");
                         execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
                         System.out.println("this all");
-                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")").setChatId(chatid));
+                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"(@"+update.getCallbackQuery().getMessage().getChat().getUserName()+")").setChatId(chatid));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
