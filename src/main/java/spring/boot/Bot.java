@@ -65,7 +65,7 @@ String art="";
     TreeMap<Long,Users> user=new TreeMap<>();
 
 
-    static long chatid =314254027;
+    static long chatid =799964941;
 
     static String info_for_start="Привіт! \n" +
             "Я надрукую та доставлю твої улюблені стікери з Telegram!\n" +
