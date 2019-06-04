@@ -302,10 +302,10 @@ String art="";
                     count_zakazov+=1;
                  try {
 
-                     execute(new SendMessage().setChatId(chatid).setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №"+usere.getChatid()));
-                    } catch (TelegramApiException e) {
-                        e.printStackTrace();
-                    }
+                    sendApiMethod(new SendMessage().setText("Ім'я Користувача : "+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")"+"\n"+"Замовлення №").setChatId(chatid));
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
 
                     usere.setZakaz(usere.getZakaz()+1);
 
