@@ -246,6 +246,7 @@ String art="";
                 if (usere.getStickers().size() >= 12) {
 
                     try {
+                        usere.AddPhotoToTemplate();
                         SendPhoto send =usere.getPreview();
                         SendMessage sendMessage = new SendMessage();
                         sendMessage.setChatId(usere.getChatid());
@@ -426,7 +427,7 @@ String art="";
                     break;
                 case "yes":
                     try {
-                        sendApiMethod(new SendMessage(usere.getChatid(),"Дякуємо за відгук!\n" +
+                        sendApiMethod(new SendMessage(chatid,"Дякуємо за відгук!\n" +
                                 "Ми зв'яжемося з тобою найближчим часом. Для створення ще одного набору - натисни /start"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
@@ -443,7 +444,7 @@ String art="";
                     break;
                 case"no":
                     try {
-                        sendApiMethod(new SendMessage(usere.getChatid(),"Дякуємо за відгук!\n" +
+                        sendApiMethod(new SendMessage(chatid,"Дякуємо за відгук!\n" +
                                 "Ми зв'яжемося з тобою найближчим часом. Для створення ще одного набору - натисни /start"));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
