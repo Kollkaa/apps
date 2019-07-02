@@ -280,7 +280,7 @@ String art="";
                 case "preview":
 
 
-                    System.out.println("about preview"+usere.getStickers().size());
+
                     try {
                         usere.AddPhotoToTemplate();
 
