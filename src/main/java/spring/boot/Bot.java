@@ -71,10 +71,10 @@ String art="";
             "Я надрукую та доставлю твої улюблені стікери з Telegram!\n" +
             "\n" +
             "\uD83D\uDC4C 12 стікерів на аркуші А5\n" +
-            "\uD83D\uDCB3 Вартість одного набору - 75 грн.\n" +
+            "\uD83D\uDCB3 Вартість набору - 75 грн.\n" +
             "\uD83D\uDCE6 Доставка по всій Україні, зручним тобі способом (оплачується окремо)\n" +
             "\n" +
-            "Натисни Створити StickerPack щоб розпочати!";
+            "\n" +"Натисни Створити StickerPack, щоб розпочати!";
 
 
 
@@ -122,11 +122,6 @@ String art="";
                         break;
                     case "/start":
 
-                        try {
-                            sendApiMethod(new SendMessage(usere.getChatid(),"Йде обрабка запиту, зачекайте будь-ласка...."));
-                        } catch (TelegramApiException e) {
-                            e.printStackTrace();
-                        }
 
 
                         try {
@@ -144,8 +139,8 @@ String art="";
                             sendApiMethod(sendMessage.setText("\n" +
                                     "За допомогою даного бота - стало можливим створити StickerPack з твоїх улюблених наборів стікерів!\n" +
                                     "Все просто, для початку роботи з ботом - надішли будь-який стікер.\n" +
-                                    "\n" +
-                                    "З усіх питань щодо роботи даного бота, писати сюди - @stickers_kiev").setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
+                                    "\n Інстаграм https://instagram.com/stickerjoker?igshid=rhg24p742oag" +
+                                    "\n З усіх питань щодо роботи даного бота, писати сюди - @stickers_kiev").setReplyMarkup(remakeButtons(usere,message.getText(), replyKeyboardMarkup, usere.getStickers().size())));
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
