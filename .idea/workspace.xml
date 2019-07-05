@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="heroku">
+    <list default="true" id="9e5659a1-6a7b-48cb-aa60-708ec4146a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cwebp_tmp/cwebp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cwebp_tmp/cwebp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cwebp_tmp/dwebp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cwebp_tmp/dwebp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cwebp_tmp/gif2webp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cwebp_tmp/gif2webp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apps-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apps.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apps.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/boot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,11 +63,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="142" column="40" selection-start-line="142" selection-start-column="40" selection-end-line="142" selection-end-column="40" />
+            <state relative-caret-position="3463">
+              <caret line="327" column="32" lean-forward="true" selection-start-line="327" selection-start-column="30" selection-end-line="327" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#openWebpage#0;class#Bot#0" />
                 <element signature="method#openWebpage#1;class#Bot#0" />
                 <element signature="method#getSticker#0;class#Bot#0" />
                 <element signature="method#remakeButtons#0;class#Bot#0" />
@@ -156,7 +146,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="495" />
     <option name="y" value="-15" />
-    <option name="width" value="959" />
+    <option name="width" value="960" />
     <option name="height" value="995" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -328,14 +318,8 @@
       <workItem from="1559554744155" duration="21171000" />
       <workItem from="1562072604698" duration="4179000" />
       <workItem from="1562164169981" duration="1499000" />
-      <workItem from="1562167648843" duration="217000" />
-    </task>
-    <task id="LOCAL-00003" summary="heroku">
-      <created>1559141174477</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1559141174477</updated>
+      <workItem from="1562167648843" duration="897000" />
+      <workItem from="1562320875858" duration="626000" />
     </task>
     <task id="LOCAL-00004" summary="heroku">
       <created>1559141276565</created>
@@ -673,16 +657,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562076425106</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="heroku">
+      <created>1562167916813</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1562167916814</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48073000" />
+    <option name="totallyTimeSpent" value="49364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16912752" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -693,7 +685,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.23937677" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.38101983" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76216215" weight="0.38101983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -849,11 +841,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="142" column="40" selection-start-line="142" selection-start-column="40" selection-end-line="142" selection-end-column="40" />
+        <state relative-caret-position="3463">
+          <caret line="327" column="32" lean-forward="true" selection-start-line="327" selection-start-column="30" selection-end-line="327" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#openWebpage#0;class#Bot#0" />
             <element signature="method#openWebpage#1;class#Bot#0" />
             <element signature="method#getSticker#0;class#Bot#0" />
             <element signature="method#remakeButtons#0;class#Bot#0" />
