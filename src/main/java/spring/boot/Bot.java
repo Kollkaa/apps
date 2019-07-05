@@ -647,6 +647,7 @@ String art="";
         keyboardRow2.add(keyboardButton3);
         List<KeyboardRow> klava = new ArrayList<KeyboardRow>();
         klava.add(keyboardRow1);
+        klava.add(keyboardRow2);
         replyKeyboardMarkup.setKeyboard(klava);
         switch (s) {
             case"Інструкція по використанню":
