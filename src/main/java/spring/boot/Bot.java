@@ -316,6 +316,7 @@ String art="";
                     try {
                         execute(sendMessage);
                         execute(infosend);
+
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }

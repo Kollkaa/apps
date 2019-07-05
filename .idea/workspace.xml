@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="317" column="42" selection-start-line="317" selection-start-column="42" selection-end-line="317" selection-end-column="42" />
+            <state relative-caret-position="537">
+              <caret line="318" selection-start-line="318" selection-end-line="318" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#openWebpage#1;class#Bot#0" />
@@ -320,14 +320,7 @@
       <workItem from="1562072604698" duration="4179000" />
       <workItem from="1562164169981" duration="1499000" />
       <workItem from="1562167648843" duration="897000" />
-      <workItem from="1562320875858" duration="942000" />
-    </task>
-    <task id="LOCAL-00005" summary="heroku">
-      <created>1559142774175</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1559142774175</updated>
+      <workItem from="1562320875858" duration="1843000" />
     </task>
     <task id="LOCAL-00006" summary="heroku">
       <created>1559142840360</created>
@@ -665,15 +658,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562321516065</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="heroku">
+      <created>1562321845328</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1562321845328</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49680000" />
+    <option name="totallyTimeSpent" value="50581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -686,7 +685,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.23937677" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76216215" weight="0.38101983" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.38101983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -842,8 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="317" column="42" selection-start-line="317" selection-start-column="42" selection-end-line="317" selection-end-column="42" />
+        <state relative-caret-position="537">
+          <caret line="318" selection-start-line="318" selection-end-line="318" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#openWebpage#1;class#Bot#0" />
