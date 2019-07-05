@@ -635,6 +635,7 @@ String art="";
     //Remake replyButtons
     public synchronized ReplyKeyboardMarkup remakeButtons(Users user,String s, ReplyKeyboardMarkup replyKeyboardMarkup, int n) {
         KeyboardRow keyboardRow1 = new KeyboardRow();
+        KeyboardRow keyboardRow2 = new KeyboardRow();
         KeyboardButton keyboardButton1 = new KeyboardButton();
         KeyboardButton keyboardButton2 = new KeyboardButton();
         KeyboardButton keyboardButton3 = new KeyboardButton();
@@ -643,7 +644,7 @@ String art="";
         keyboardButton3.setText("Інструкція по використанню");
         keyboardRow1.add(keyboardButton1);
         keyboardRow1.add(keyboardButton2);
-        keyboardRow1.add(keyboardButton3);
+        keyboardRow2.add(keyboardButton3);
         List<KeyboardRow> klava = new ArrayList<KeyboardRow>();
         klava.add(keyboardRow1);
         replyKeyboardMarkup.setKeyboard(klava);

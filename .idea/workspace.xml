@@ -30,11 +30,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
+            <state relative-caret-position="646">
+              <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#2050#2051#0" expanded="true" />
+                <element signature="e#2221#2222#0" expanded="true" />
                 <element signature="method#combineALLImages#0;class#Users#0" />
+                <element signature="e#5445#5446#0" expanded="true" />
+                <element signature="e#5502#5503#0" expanded="true" />
+                <element signature="e#5551#5552#0" expanded="true" />
+                <element signature="e#5608#5609#0" expanded="true" />
+                <element signature="e#5664#5665#0" expanded="true" />
+                <element signature="e#5737#5738#0" expanded="true" />
+                <element signature="e#5796#5797#0" expanded="true" />
+                <element signature="e#5854#5855#0" expanded="true" />
+                <element signature="e#5913#5914#0" expanded="true" />
+                <element signature="e#5975#5976#0" expanded="true" />
+                <element signature="e#6053#6054#0" expanded="true" />
+                <element signature="e#6131#6132#0" expanded="true" />
+                <element signature="e#6218#6219#0" expanded="true" />
+                <element signature="e#6318#6319#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="170">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,13 +86,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="318" selection-start-line="318" selection-end-line="318" />
+            <state relative-caret-position="219">
+              <caret line="647" column="63" lean-forward="true" selection-start-line="647" selection-start-column="63" selection-end-line="647" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#openWebpage#1;class#Bot#0" />
                 <element signature="method#getSticker#0;class#Bot#0" />
-                <element signature="method#remakeButtons#0;class#Bot#0" />
                 <element signature="method#DecodedWebP#0;class#Bot#0" />
               </folding>
             </state>
@@ -121,9 +142,9 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/users.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/boot/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/boot/Bot.java" />
       </list>
     </option>
@@ -217,6 +238,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.27887788" />
@@ -320,21 +342,7 @@
       <workItem from="1562072604698" duration="4179000" />
       <workItem from="1562164169981" duration="1499000" />
       <workItem from="1562167648843" duration="897000" />
-      <workItem from="1562320875858" duration="1843000" />
-    </task>
-    <task id="LOCAL-00006" summary="heroku">
-      <created>1559142840360</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1559142840360</updated>
-    </task>
-    <task id="LOCAL-00007" summary="heroku">
-      <created>1559143325418</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1559143325418</updated>
+      <workItem from="1562320875858" duration="4782000" />
     </task>
     <task id="LOCAL-00008" summary="heroku">
       <created>1559144523840</created>
@@ -665,16 +673,31 @@
       <option name="project" value="LOCAL" />
       <updated>1562321845328</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="heroku">
+      <created>1562323476859</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1562323476859</updated>
+    </task>
+    <task id="LOCAL-00056" summary="heroku">
+      <created>1562349117720</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1562349117720</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50581000" />
+    <option name="totallyTimeSpent" value="53520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -685,7 +708,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.23937677" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.38101983" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76216215" weight="0.38101983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -701,7 +724,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.16577181" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.16577181" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -710,7 +733,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18513514" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -720,8 +743,8 @@
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76216215" visible="true" weight="0.20614035" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49797297" weight="0.23937677" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76216215" weight="0.38101983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -730,14 +753,14 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8945946" weight="0.24122807" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23783784" side_tool="true" weight="0.38450292" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4972973" weight="0.32894737" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4972973" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49864864" weight="0.32894737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.33851352" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.16577181" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -795,34 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#combineALLImages#0;class#Users#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/app.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -839,15 +834,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#2050#2051#0" expanded="true" />
+            <element signature="e#2221#2222#0" expanded="true" />
+            <element signature="method#combineALLImages#0;class#Users#0" />
+            <element signature="e#5445#5446#0" expanded="true" />
+            <element signature="e#5502#5503#0" expanded="true" />
+            <element signature="e#5551#5552#0" expanded="true" />
+            <element signature="e#5608#5609#0" expanded="true" />
+            <element signature="e#5664#5665#0" expanded="true" />
+            <element signature="e#5737#5738#0" expanded="true" />
+            <element signature="e#5796#5797#0" expanded="true" />
+            <element signature="e#5854#5855#0" expanded="true" />
+            <element signature="e#5913#5914#0" expanded="true" />
+            <element signature="e#5975#5976#0" expanded="true" />
+            <element signature="e#6053#6054#0" expanded="true" />
+            <element signature="e#6131#6132#0" expanded="true" />
+            <element signature="e#6218#6219#0" expanded="true" />
+            <element signature="e#6318#6319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/boot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="318" selection-start-line="318" selection-end-line="318" />
+        <state relative-caret-position="219">
+          <caret line="647" column="63" lean-forward="true" selection-start-line="647" selection-start-column="63" selection-end-line="647" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#openWebpage#1;class#Bot#0" />
             <element signature="method#getSticker#0;class#Bot#0" />
-            <element signature="method#remakeButtons#0;class#Bot#0" />
             <element signature="method#DecodedWebP#0;class#Bot#0" />
           </folding>
         </state>
