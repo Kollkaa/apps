@@ -304,13 +304,18 @@ String art="";
                     System.out.println("about enter");
 
                     SendMessage sendMessage =new SendMessage();
+                    SendMessage infosend=new SendMessage();
                     sendMessage.setChatId(usere.getChatid());
                     sendMessage.setText("Для оформлення замовлення вкажіть:\n" +
                             "1) ПІБ\n" +
                             "2) Місто доставки\n" +
                             "3) Номер телефону‼️(Інакше ми не зможемо зв’язатися з вами)");
+                    infosend.setChatId(usere.getChatid());
+                    infosend.setText("Для створення ще одного макету-нажміть Оформити.\n" +
+                            "Вкажіть власні данні, та почніть створювати спочатку.\n");
                     try {
                         execute(sendMessage);
+                        execute(infosend);
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
