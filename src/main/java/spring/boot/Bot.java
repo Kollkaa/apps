@@ -58,6 +58,7 @@ String art="";
     int count_zakazov;
     int positive_=0;
     int negative_=0;
+    String val="..";
 
 
     //799964941
@@ -172,6 +173,25 @@ String art="";
                         positive_=0;
                         negative_=0;
                         break;
+                    case "Інструкція по використанню":
+                        try {
+                            execute(new SendMessage().setText("1.Для створення StickerPack необхідно натиснути:\n" +
+                                    "Створити StickerPack\n" +
+                                    "===============================================\n" +
+                                    "2.Заповнюєте StickerPack необхідною кількістю \n" +
+                                    "стикерів(Максимально-12)\n" +
+                                    "===============================================\n" +
+                                    "3.Оформляєте замовлення, для цього вводите особисті дані,\n" +
+                                    "після цього ви отримаєте повідомлення про отримання замовлення\n" +
+                                    "=============ДОДАТКОВА ІНФОРМАЦІЯ==============\n" +
+                                    "1.Для попереднього перегляду StickerPack  натисніть-Превью\n" +
+                                    "2.Для створення ще одного StickerPack закінчіть офромлення попереднього\n" +
+                                    "та повторіть ваші дії заново.\n" +
+                                    "===============================================\n").setChatId(usere.getChatid()));
+                        } catch (TelegramApiException e) {
+                            e.printStackTrace();
+                        }
+                        break;
 
                     default:
 
@@ -179,7 +199,7 @@ String art="";
                         try {
                             if (message.getText()!=null) {
                                 sendMessage.setChatId(chatid);
-                                sendMessage.setText("Данні користувача :"+usere.getName()+"("+update.getMessage().getChat().getUserName()+")"+", по замовленню №:" +usere.getChatid() +"\n"+message.getText());
+                                sendMessage.setText("Данні користувача :"+usere.getName()+"(@"+update.getMessage().getChat().getUserName()+")"+", по замовленню №:" +usere.getChatid() +"\n"+message.getText());
                                 execute(sendMessage);
                                 execute((sendInlineKeyBoardMessage(usere.getChatid(),3)
                                         .setText("Виберіть спосіб оплати")));
@@ -269,6 +289,7 @@ String art="";
             } //To worker make stickers messege
         }
         if(update.hasCallbackQuery()){
+            val=update.getCallbackQuery().getMessage().getChat().getUserName();
             switch (update.getCallbackQuery().getData())
             {
 
@@ -310,12 +331,12 @@ String art="";
                             "1) ПІБ\n" +
                             "2) Місто доставки\n" +
                             "3) Номер телефону‼️(Інакше ми не зможемо зв’язатися з вами)");
-                    infosend.setChatId(usere.getChatid());
-                    infosend.setText("Для створення ще одного макету-нажміть Оформити.\n" +
-                            "Вкажіть власні данні, та почніть створювати спочатку.\n");
+//                    infosend.setChatId(usere.getChatid());
+//                    infosend.setText("Для створення ще одного макету-нажміть Оформити.\n" +
+//                            "Вкажіть власні данні, та почніть створювати спочатку.\n");
                     try {
                         execute(sendMessage);
-                        execute(infosend);
+//                        execute(infosend);
 
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
@@ -328,7 +349,7 @@ String art="";
                         System.out.println("maket ready");
                         execute(new SendDocument().setDocument(new File(usere.getScreenName()+"stickerpack.png")).setChatId(chatid));
                         System.out.println("this all");
-                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"(@"+update.getCallbackQuery().getMessage().getChat().getUserName()+")").setChatId(chatid));
+                        execute(new SendMessage().setText("Макет під замовлення користувача:"+usere.getName()+"(@"+val+")").setChatId(chatid));
                     } catch (TelegramApiException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -616,14 +637,19 @@ String art="";
         KeyboardRow keyboardRow1 = new KeyboardRow();
         KeyboardButton keyboardButton1 = new KeyboardButton();
         KeyboardButton keyboardButton2 = new KeyboardButton();
+        KeyboardButton keyboardButton3 = new KeyboardButton();
         keyboardButton1.setText("Про бота");
         keyboardButton2.setText("Створити StickerPack");
+        keyboardButton3.setText("Інструкція по використанню");
         keyboardRow1.add(keyboardButton1);
         keyboardRow1.add(keyboardButton2);
+        keyboardRow1.add(keyboardButton3);
         List<KeyboardRow> klava = new ArrayList<KeyboardRow>();
         klava.add(keyboardRow1);
         replyKeyboardMarkup.setKeyboard(klava);
         switch (s) {
+            case"Інструкція по використанню":
+                return replyKeyboardMarkup;
             case"hide":
                 keyboardRow1.clear();
                 klava = new ArrayList<KeyboardRow>();

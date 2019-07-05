@@ -24,8 +24,18 @@ public class Users {
 
     private  int zakaz=0;
     private String screenName;
+
+    public static String getNickname() {
+        return nickname;
+    }
+
+    public static void setNickname(String nickname) {
+        Users.nickname = nickname;
+    }
+
     static BufferedImage sample;
     static BufferedImage finalImg;
+    static String nickname;
     BufferedImage temp;
 
     public Users(Long chatid, ArrayList<Sticker> stickers,String name) {
@@ -63,6 +73,7 @@ public class Users {
                 drawImage(temp, sample.getWidth()/3,sample.getHeight()-130,null);
 
     }
+
 
     public SendPhoto getPreview() throws IOException {
 
